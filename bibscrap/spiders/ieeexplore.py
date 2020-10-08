@@ -19,6 +19,11 @@ class IeeexploreSpider(scrapy.Spider):
         print(titles.extract())
 
  import json
+
+#how to import json?
+#user put in doi as a parameter, then we import json of the website using query + api key + &doi=
+#then work the parse json data
+
  with open('data.json') as json_file:
         data = json.load(json_file)
         
