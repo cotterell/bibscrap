@@ -23,7 +23,7 @@ class IeeexploreSpider(scrapy.Spider):
 #how to import json?
 #user put in doi as a parameter, then we import json of the website using query + api key + &doi=
 #then work the parse json data
-
+#there is a limit to how many call a day when using api key, might have to register for some more api keys
  with open('data.json') as json_file:
         data = json.load(json_file)
         
