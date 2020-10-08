@@ -17,3 +17,9 @@ class IeeexploreSpider(scrapy.Spider):
         hxs = scrapy.Selector(response)
         titles = hxs.xpath('/html/body/div[4]/div/div/div/div[5]/div/xpl-root/div/xpl-document-details/div/div[1]/section[2]/div/xpl-document-header/section/div[2]/div/div/div[1]/div/div/h1/span/text()')
         print(titles.extract())
+
+ import json
+ with open('data.json') as json_file:
+        data = json.load(json_file)
+        
+        print("
