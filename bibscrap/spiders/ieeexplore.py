@@ -22,4 +22,6 @@ class IeeexploreSpider(scrapy.Spider):
  with open('data.json') as json_file:
         data = json.load(json_file)
         
-        print("
+        print("Title: ", data['title'])
+        print("Authors: ", data['authors')
+        print("Abstract:", data['abstract'])
