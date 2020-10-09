@@ -18,7 +18,9 @@ class IeeexploreSpider(scrapy.Spider):
         titles = hxs.xpath('/html/body/div[4]/div/div/div/div[5]/div/xpl-root/div/xpl-document-details/div/div[1]/section[2]/div/xpl-document-header/section/div[2]/div/div/div[1]/div/div/h1/span/text()')
         print(titles.extract())
 
- import json, urllib.request
+ 
+
+import json, urllib.request
 
 #how to import json?
 #user put in doi as a parameter, then we import json of the website using query + api key + &doi=
