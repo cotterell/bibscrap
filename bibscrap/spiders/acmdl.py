@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
+import pandas as pd
 
 
 class AcmdlSpider(scrapy.Spider):
@@ -11,6 +12,8 @@ class AcmdlSpider(scrapy.Spider):
         self.start_urls = [f'https://dl.acm.org/doi/{doi}']  # py36
         # self.start_urls = [f'http://dl.acm.org/doi/{doi}']
         super().__init__(**kwargs)  # python
+        global doiRef
+        doiRef = doi
 
     def parse(self, response):
         sel = scrapy.Selector(response)
@@ -24,28 +27,21 @@ class AcmdlSpider(scrapy.Spider):
         abstract = sel.xpath(
             '/html/body/div[1]/div/main/div[2]/article/div[2]/div[2]/div[2]/div[1]/div/div[2]/p/text()').extract()
 
-        print('**************')
-        print(f'TITLE: {title}')
-        print('***************')
-        print(f'AUTHORS: {authors}')
-        print('***************')
-        print(f'ABSTRACT: {abstract}')
-        print('***************')
-        print('REFERENCES: ')
-        print()
-
         referenceTitles = response.xpath(
             '/html/body/div/div/main/div[2]/article/div[2]/div[2]/div[2]/div[3]/ol/li/span/text()').getall()
 
         referenceLinks = response.xpath(
             '/html/body/div/div/main/div[2]/article/div[2]/div[2]/div[2]/div[3]/ol/li/span/span/a/@href').getall()
-            
-        referenceDictionary = {}
-        for i in range(len(referenceTitles)):
-            x = referenceTitles[i]
-            y = referenceLinks[i]
-            print(f"Reference title: {x}, Link: {y}")
-            print()
-            referenceDictionary.update({x:y})
         
-        #print(referenceDictionary)
+        data = {
+                'DOI': [doiRef],
+                'Title': title,
+                'Authors': authors,
+                'Abstract': [abstract],
+                'Reference Titles': referenceTitles,
+                'Reference Links': referenceLinks
+                }
+        
+        df = pd.DataFrame(list(data.items())) 
+        df.to_csv('test.csv')
+        print(df)       
