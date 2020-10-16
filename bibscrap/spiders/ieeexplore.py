@@ -26,14 +26,19 @@ import json, urllib.request
 #user put in doi as a parameter, then we import json of the website using query + api key + &doi=
 #then work the parse json data
 #there is a limit to how many call a day when using api key, might have to register for some more api keys
+import ssl
 
- with urllib.request.urlopen("https://ieeexploreapi.ieee.org/api/v1/search/articles?parameter&apikey=3r88q7n22u429vtenyjjrhks&doi=10.1109/TTS.2020.2992669") as url:
+context = ssl._create_unverified_context()
+with urllib.request.urlopen('https://ieeexploreapi.ieee.org/api/v1/search/articles?parameter&apikey=3r88q7n22u429vtenyjjrhks&doi=10.1109/TTS.2020.2992669', context = context) as url:
     data = json.loads(url.read().decode())
-       
-    for i in data['article']:
-        print("Title: ", data['title'])
+    
+    for i in data['articles']:
+        print("Title: ", i['title'])
+        print("")
+        authors = i['authors']
+        
+        for j in authors['authors']:
+            print("Authors: ", j['full_name'])
             
-        for j in data['authors']:
-            print("Authors: ", data['authors'])
-            
-        print("Abstract:", data['abstract'])
+        print("")
+        print("Abstract:", i['abstract'])
