@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 import scrapy
 import pandas as pd
-
+import os.path
+from os import path
 
 class AcmdlSpider(scrapy.Spider):
     name = 'acmdl'
@@ -19,29 +20,38 @@ class AcmdlSpider(scrapy.Spider):
         sel = scrapy.Selector(response)
 
         title = sel.xpath(
-            '/html/body/div[1]/div/main/div[2]/article/div[1]/div[2]/div/div[2]/h1/text()').extract()
+            '/html/body/div[1]/div/main/div[2]/article/div[1]/div[2]/div/div[2]/h1/text()'
+            ).extract()
 
         authors = response.xpath(
-            '/html/body/div[1]/div/main/div[2]/article/div[1]/div[2]/div/div[3]/div/ul/li/a/span/div/span/span/text()').getall()
+            '/html/body/div[1]/div/main/div[2]/article/div[1]/div[2]/div/div[3]/div/ul/li/a/span/div/span/span/text()'
+            ).getall()
 
         abstract = sel.xpath(
-            '/html/body/div[1]/div/main/div[2]/article/div[2]/div[2]/div[2]/div[1]/div/div[2]/p/text()').extract()
+            '/html/body/div[1]/div/main/div[2]/article/div[2]/div[2]/div[2]/div[1]/div/div[2]/p/text()'
+            ).extract()
 
         referenceTitles = response.xpath(
-            '/html/body/div/div/main/div[2]/article/div[2]/div[2]/div[2]/div[3]/ol/li/span/text()').getall()
+            '/html/body/div/div/main/div[2]/article/div[2]/div[2]/div[2]/div[3]/ol/li/span/text()'
+            ).getall()
 
         referenceLinks = response.xpath(
-            '/html/body/div/div/main/div[2]/article/div[2]/div[2]/div[2]/div[3]/ol/li/span/span/a/@href').getall()
-        
+            '/html/body/div/div/main/div[2]/article/div[2]/div[2]/div[2]/div[3]/ol/li/span/span/a/@href'
+            ).getall()
+
         data = {
-                'DOI': [doiRef],
-                'Title': title,
-                'Authors': authors,
-                'Abstract': [abstract],
-                'Reference Titles': referenceTitles,
-                'Reference Links': referenceLinks
-                }
+            'DOI': [doiRef],
+            'Title': title,
+            'Authors': authors,
+            'Abstract': [abstract],
+            'Reference Titles': referenceTitles,
+            'Reference Links': referenceLinks
+        }
         
-        df = pd.DataFrame(list(data.items())) 
-        df.to_csv('test.csv')
-        print(df)       
+        df = pd.DataFrame(list(data.items()))
+
+        if (path.exists('acmdl.csv') == False): 
+            df.to_csv('acmdl.csv')
+            print(df)
+        else:
+            df.to_csv('acmdl.csv', mode = 'a', header = False)
