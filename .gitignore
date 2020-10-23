@@ -1,0 +1,13 @@
+# python cache and compiled code
+__pycache__/
+*.py[cod]
+*$py.class
+
+# os generated files
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# editor backup files
+*~
