@@ -24,29 +24,10 @@ class IeeexploreSpider(scrapy.Spider):
 
 import json, urllib.request
 import ssl
-#there is a limit to how many call a day when using api key, might have to register for some more api keys
+
 
 doi_shneiderman = '10.1109/TTS.2020.2992669'
 
-def get_ieee_paper(doi):
-    api_key = '3r88q7n22u429vtenyjjrhks'
-    url = f'https://ieeexploreapi.ieee.org/api/v1/search/articles?parameter&apikey={api_key}&doi={doi}'
-    context_ssl = ssl._create_unverified_context()
-
-    with urllib.request.urlopen(url, context = context_ssl) as url:
-        data = json.loads(url.read().decode())
-
-        for i in data['articles']:
-            print("Title: ", i['title'])
-            print("")
-            authors = i['authors']
-
-            for j in authors['authors']:
-                print("Authors: ", j['full_name'])
-
-            print("")
-            print("Abstract:", i['abstract'])
-            
 def get_ieee_paper_dict(doi):
     api_key = '3r88q7n22u429vtenyjjrhks'
     url = f'https://ieeexploreapi.ieee.org/api/v1/search/articles?parameter&apikey={api_key}&doi={doi}'
@@ -61,5 +42,20 @@ def get_ieee_paper_dict(doi):
     
     return {}
 
+def get_ieee_paper(doi):
+    data = get_ieee_paper_dict(doi)
+    for i in data['articles']:
+        print("Title:", i['title'])
+        print("")
+        
+        authors = i['authors']
+        print("Authors: ", end='') 
+        for j in authors['authors']:
+            print(j['full_name'], end=', ')
+            
+        print("")
+        print("")
+        print("Abstract:", i['abstract'])
+            
 
                   
