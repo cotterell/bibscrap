@@ -24,6 +24,7 @@ class IeeexploreSpider(scrapy.Spider):
 
 import json, urllib.request
 import ssl
+import pandas as pd
 
 
 doi_shneiderman = '10.1109/TTS.2020.2992669'
@@ -44,18 +45,26 @@ def get_ieee_paper_dict(doi):
 
 def get_ieee_paper(doi):
     data = get_ieee_paper_dict(doi)
-    for i in data['articles']:
-        print("Title:", i['title'])
-        print("")
-        
-        authors = i['authors']
-        print("Authors: ", end='') 
-        for j in authors['authors']:
-            print(j['full_name'], end=', ')
-            
-        print("")
-        print("")
-        print("Abstract:", i['abstract'])
-            
+    
+    article_data = data['articles']
+    title = article_data[0]["title"]
+    
+    authors_data = article_data[0]['authors']['authors']
+    authors_full_name = ''
+    for i in authors_data:
+        authors_full_name += i['full_name'] +', '
+    
+    abstract = article_data[0]['abstract']
+    
+    final_data = [{
+        'DOI': doi,
+        'Title': title,
+        'Authors': authors_full_name,
+        'Abstract': abstract,
+    }]
+    return final_data
 
-                  
+def convert_to_dataframe(data):
+    df = pd.DataFrame(data, columns = ['DOI', 'Title', 'Authors', 'Abstract'])
+    return df
+
