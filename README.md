@@ -21,6 +21,18 @@ $ git clone git@github.com:cotterell/bibscrap.git
 ```
 
 ------------------------
+### Execution
 
+As of right now, the spider will have to be manually executed.
 
+ACMDL
+```
+$ scrapy crawl -a doi=<DOI> acmdl
+```
 
+IEEEXplore
+```
+$ scrapy crawl -a doi=<DOI> ieeexplore
+```
+
+Where [DOI](https://en.wikipedia.org/wiki/Digital_object_identifier) is some identifier for a particular study.
