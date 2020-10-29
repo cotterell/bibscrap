@@ -32,8 +32,7 @@ class IeeexploreSpider(scrapy.Spider):
     #doi_shneiderman = '10.1109/TTS.2020.2992669'
     
     def __init__(self, doi='', **kwargs):
-        global doiRef = doi
-        get_ieee_paper(doiRef)
+        get_ieee_paper(doi)
 
     def get_ieee_paper_dict(doi):
         api_key = '3r88q7n22u429vtenyjjrhks'
@@ -65,11 +64,11 @@ class IeeexploreSpider(scrapy.Spider):
         final_data = [{
             'DOI': doi,
             'Title': title,
-            'Authors': authors_full_name,
+            'Author(s)': authors_full_name,
             'Abstract': abstract,
         }]
 
-        df = pd.DataFrame(final_data, columns = ['DOI', 'Title', 'Authors', 'Abstract'])
+        df = pd.DataFrame(final_data, columns = ['DOI', 'Title', 'Author(s)', 'Abstract'])
         
-        df.to_csv(f'{doi}.csv')
+        df.to_csv('ieee.csv')
 
