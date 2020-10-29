@@ -27,7 +27,7 @@ import ssl
 import pandas as pd
 
 class IeeexploreSpider(scrapy.Spider):
-    name = 'ieee'
+    name = 'ieeexplore'
     
     #doi_shneiderman = '10.1109/TTS.2020.2992669'
     
