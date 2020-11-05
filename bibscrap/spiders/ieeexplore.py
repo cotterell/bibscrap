@@ -32,7 +32,7 @@ class IeeexploreSpider(scrapy.Spider):
     #doi_shneiderman = '10.1109/TTS.2020.2992669'
     
     def __init__(self, doi='', **kwargs):
-        get_ieee_paper(doi)
+        self.get_ieee_paper(doi)
 
     def get_ieee_paper_dict(doi):
         api_key = '3r88q7n22u429vtenyjjrhks'
