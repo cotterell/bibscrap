@@ -32,7 +32,7 @@ $ scrapy crawl -a doi=<DOI> acmdl
 
 IEEEXplore
 ```
-$ scrapy crawl -a doi=<DOI> ieeexplore
+$ scrapy crawl -a doi=<DOI> ieee
 ```
 
 Where [DOI](https://en.wikipedia.org/wiki/Digital_object_identifier) is some identifier for a particular study.
