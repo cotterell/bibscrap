@@ -17,7 +17,7 @@ Given some [DOI](https://en.wikipedia.org/wiki/Digital_object_identifier), `bibs
 ### Installation
 
 ```
-$ git clone git@github.com:cotterell/bibscrap.git
+$ git clone https://github.com/cotterell/bibscrap.git
 ```
 
 ------------------------

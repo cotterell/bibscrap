@@ -1,40 +1,20 @@
 # -*- coding: utf-8 -*-
 import scrapy
 from scrapy.selector import Selector
-
-class IeeexploreSpider(scrapy.Spider):
-    name = 'ieeexplore'
-    allowed_domains = ['ieee.org', 'doi.org']
-    start_urls = ['https://ieeexplore.ieee.org/document/5581052']
-
-    #def __init__(self, doi='', **kwargs):
-    #    self.start_urls = [f'https://dx.doi.org/{doi}']  # py36
-    #    super().__init__(**kwargs)  # python3
-
-
-    def parse(self, response):
-        #self.log(self.domain)
-        hxs = scrapy.Selector(response)
-        titles = hxs.xpath('/html/body/div[4]/div/div/div/div[5]/div/xpl-root/div/xpl-document-details/div/div[1]/section[2]/div/xpl-document-header/section/div[2]/div/div/div[1]/div/div/h1/span/text()')
-        print(titles.extract())
-
- 
-
-
-import scrapy
 import json, urllib.request
 import ssl
 import pandas as pd
 
 class IeeexploreSpider(scrapy.Spider):
     name = 'ieeexplore'
-    
+    allowed_domains = ['ieee.org']
     #doi_shneiderman = '10.1109/TTS.2020.2992669'
-    
+
     def __init__(self, doi='', **kwargs):
+        super().__init__(**kwargs)
         self.get_ieee_paper(doi)
 
-    def get_ieee_paper_dict(doi):
+    def get_ieee_paper_dict(self, doi):
         api_key = '3r88q7n22u429vtenyjjrhks'
         url = f'https://ieeexploreapi.ieee.org/api/v1/search/articles?parameter&apikey={api_key}&doi={doi}'
         context_ssl = ssl._create_unverified_context()
@@ -43,13 +23,13 @@ class IeeexploreSpider(scrapy.Spider):
             with urllib.request.urlopen(url, context = context_ssl) as url:
                 data = json.loads(url.read().decode())
                 return data
-        except Exception as e: 
+        except Exception as e:
             print(e)
 
         return {}
 
-    def get_ieee_paper(doi):
-        data = get_ieee_paper_dict(doi)
+    def get_ieee_paper(self, doi):
+        data = self.get_ieee_paper_dict(doi)
 
         article_data = data['articles']
         title = article_data[0]["title"]
@@ -69,6 +49,6 @@ class IeeexploreSpider(scrapy.Spider):
         }]
 
         df = pd.DataFrame(final_data, columns = ['DOI', 'Title', 'Author(s)', 'Abstract'])
-        
+
         df.to_csv('ieee.csv')
 
