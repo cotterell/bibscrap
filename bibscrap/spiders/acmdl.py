@@ -4,6 +4,7 @@ import pandas as pd
 import os.path
 from os import path
 
+
 class AcmdlSpider(scrapy.Spider):
     name = 'acmdl'
     # allowed_domains = ['acm.org']
@@ -16,42 +17,46 @@ class AcmdlSpider(scrapy.Spider):
         global doiRef
         doiRef = doi
 
+    @classmethod
+    def toList(cls, o):
+        if isinstance(o, list):
+            return o
+        else:
+            return [o]
+
     def parse(self, response):
         sel = scrapy.Selector(response)
 
         title = sel.xpath(
-            '/html/body/div[1]/div/main/div[2]/article/div[1]/div[2]/div/div[2]/h1/text()'
+            '/html/body/div[1]/div/main/div[2]/article/div[1]/div[2]/div/div[2]/h1/text()'  # noqa
             ).extract()
 
         authors = response.xpath(
-            '/html/body/div[1]/div/main/div[2]/article/div[1]/div[2]/div/div[3]/div/ul/li/a/span/div/span/span/text()'
+            '/html/body/div[1]/div/main/div[2]/article/div[1]/div[2]/div/div[3]/div/ul/li/a/span/div/span/span/text()'  # noqa
             ).getall()
 
         abstract = sel.xpath(
-            '/html/body/div[1]/div/main/div[2]/article/div[2]/div[2]/div[2]/div[1]/div/div[2]/p/text()'
+            '/html/body/div[1]/div/main/div[2]/article/div[2]/div[2]/div[2]/div[1]/div/div[2]/p/text()'  # noqa
             ).extract()
 
         referenceTitles = response.xpath(
-            '/html/body/div/div/main/div[2]/article/div[2]/div[2]/div[2]/div[3]/ol/li/span/text()'
+            '/html/body/div/div/main/div[2]/article/div[2]/div[2]/div[2]/div[3]/ol/li/span/text()'  # noqa
             ).getall()
 
         referenceLinks = response.xpath(
-            '/html/body/div/div/main/div[2]/article/div[2]/div[2]/div[2]/div[3]/ol/li/span/span/a/@href'
+            '/html/body/div/div/main/div[2]/article/div[2]/div[2]/div[2]/div[3]/ol/li/span/span/a/@href'  # noqa
             ).getall()
 
-        data = {
-            'DOI': [doiRef],
-            'Title': title,
-            'Authors': authors,
-            'Abstract': [abstract],
-            'Reference Titles': referenceTitles,
-            'Reference Links': referenceLinks
-        }
-        
-        df = pd.DataFrame(list(data.items()))
+        data = {'doi': str(doiRef), 'title': title, 'authors': [authors], 'abstract': abstract, 'reference titles': [referenceTitles], 'reference links': [referenceLinks]}  # noqa
 
-        if (path.exists('acmdl.csv') == False): 
+        print(list(data))
+        print(type(data))
+        df = pd.DataFrame(data)
+        df.transpose()
+
+        if (path.exists('acmdl.csv') == False):
             df.to_csv('acmdl.csv')
             print(df)
         else:
-            df.to_csv('acmdl.csv', mode = 'a', header = False)
+            df.to_csv('acmdl.csv', mode='a', header=False)
+            print(df)
