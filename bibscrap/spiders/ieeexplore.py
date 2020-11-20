@@ -58,7 +58,7 @@ class IeeexploreSpider(scrapy.Spider):
         entries= entries[1:]                                         # omit "View References"
         return [clean_reference(entry) for entry in entries]         #cleaning each reference and put them into a list
 
-    def get_ieee_paper(doi):
+    def get_ieee_paper(self, doi):
         data = self.get_ieee_paper_dict(doi)
 
         article_data = data['articles']
