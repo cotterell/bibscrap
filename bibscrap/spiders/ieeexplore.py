@@ -140,13 +140,13 @@ class IeeexploreSpider(scrapy.Spider):
             ref_paper_data[0]['Referenced by'] = data[0]['DOI']
             try:
                 data.extend(ref_paper_data)
-            except Error as e:
+            except Exception as e:
                 print(e)
         df = pd.DataFrame(data, columns = ['DOI', 'Title', 'Author(s)', 'Abstract', 'Reference(s)', 'Referenced by'])
         #return df
         df.to_csv('ieee.csv')
 
     #print(get_doi_from_ref('Radiative "decay" of non radiative surface plasmons excited by light'))
-    #get_all_papers('10.1109/TTS.2020.2992669')
+    #get_all_papers('10.1109/SMC.2018.00641')
     #data = get_ieee_paper_dict('TDG4839435')
     #print(data['total_records'])
