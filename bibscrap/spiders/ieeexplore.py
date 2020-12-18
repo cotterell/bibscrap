@@ -12,7 +12,6 @@ from pprint import pprint
 class IeeexploreSpider(scrapy.Spider):
     name = 'ieee'
     allowed_domains = ['ieee.org']
-    #doi_shneiderman = '10.1109/TTS.2020.2992669'
     _current_key = 0
     
     def __init__(self, doi='', **kwargs):
@@ -21,6 +20,7 @@ class IeeexploreSpider(scrapy.Spider):
     
     def get_api_key(self):
         global _current_key
+        _current_key = 0
         api_keys = ['3r88q7n22u429vtenyjjrhks', 'buqr39fvze48b4htc4q3xthu']
         api_key = api_keys[_current_key % len(api_keys)]
         _current_key += 1
