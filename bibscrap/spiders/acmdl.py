@@ -39,16 +39,16 @@ class AcmdlSpider(scrapy.Spider):
             '/html/body/div/div/main/div[2]/article/div[2]/div[2]/div[2]/div[3]/ol/li/span/span/a/@href'
             ).getall()
 
-        data = {
+        data = [{
             'DOI': [doiRef],
             'Title': title,
-            'Authors': authors,
+            'Author(s)': authors,
             'Abstract': [abstract],
             'Reference Titles': referenceTitles,
             'Reference Links': referenceLinks
-        }
+        }]
         
-        df = pd.DataFrame(list(data.items()))
+        df = pd.DataFrame(data, columns = ['DOI', 'Title', 'Author(s)', 'Abstract', 'Reference Titles', 'Reference Links'])
 
         if (path.exists('acmdl.csv') == False): 
             df.to_csv('acmdl.csv')
