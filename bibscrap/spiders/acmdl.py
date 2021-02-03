@@ -40,10 +40,10 @@ class AcmdlSpider(scrapy.Spider):
             ).getall()
 
         data = [{
-            'DOI': [doiRef],
+            'DOI': doiRef,
             'Title': title,
             'Author(s)': authors,
-            'Abstract': [abstract],
+            'Abstract': abstract,
             'Reference Titles': referenceTitles,
             'Reference Links': referenceLinks
         }]
