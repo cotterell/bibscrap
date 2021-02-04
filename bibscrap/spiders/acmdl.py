@@ -47,7 +47,7 @@ class AcmdlSpider(scrapy.Spider):
             'Author(s)': authors,
             'Abstract': abstract,
             'Reference Titles': referenceTitles,
-            'Reference Links': referenceLinks
+            'Reference Links': acmdlArticlesLinks
         }]
         
         df = pd.DataFrame(data, columns = ['DOI', 'Title', 'Author(s)', 'Abstract', 'Reference Titles', 'Reference Links'])
