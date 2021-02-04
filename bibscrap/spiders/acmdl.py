@@ -38,6 +38,8 @@ class AcmdlSpider(scrapy.Spider):
         referenceLinks = response.xpath(
             '/html/body/div/div/main/div[2]/article/div[2]/div[2]/div[2]/div[3]/ol/li/span/span/a/@href'
             ).getall()
+        
+        acmdlArticlesLinks  = response.xpath('/html/body/div/div/main/div[2]/article/div[2]/div[2]/div[2]/div[3]/ol/li/span/span/span/a/@href').getall()
 
         data = [{
             'DOI': doiRef,
