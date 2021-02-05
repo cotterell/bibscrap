@@ -9,6 +9,7 @@ setuptools = "*"
 wheel = "*"
 twine = "*"
 build = "*"
+requests = "*"
 
 [packages]
 
