@@ -10,6 +10,11 @@ and curation of :term:`systematic literature reviews <systematic literature revi
    :caption: Getting Started
 
    installation
+   tutorials
+
+.. toctree::
+   :maxdepth: 2
+   :caption: **API**
 
 .. toctree::
    :maxdepth: 2
@@ -17,8 +22,7 @@ and curation of :term:`systematic literature reviews <systematic literature revi
 
    glossary
 
-Indices and tables
-==================
+.. rubric:: Indices and Tables
 
 * :ref:`genindex`
 * :ref:`modindex`
