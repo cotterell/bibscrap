@@ -8,8 +8,9 @@ from bs4 import BeautifulSoup
 import ssl
 import pandas as pd
 from pprint import pprint
+from . import bibscrapspider
 
-class Ieee(BibscrapSpider, scrapy.Spider):
+class Ieee(bibscrapspider.BibscrapSpider, scrapy.Spider):
     name = 'ieee'
     allowed_domains = ['ieee.org']
     _current_key = 0
