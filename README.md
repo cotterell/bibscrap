@@ -23,16 +23,15 @@ $ git clone https://github.com/cotterell/bibscrap.git
 ------------------------
 ### Execution
 
-As of right now, the spider will have to be manually executed.
+After cloning the repository, a user may use bibscrap by typing in the following command:
 
-ACMDL
 ```
-$ scrapy crawl -a doi=<DOI> acmdl
-```
-
-IEEEXplore
-```
-$ scrapy crawl -a doi=<DOI> ieee
+$ python bibscrap-main.py --doi <DOI>  
 ```
 
-Where [DOI](https://en.wikipedia.org/wiki/Digital_object_identifier) is some identifier for a particular study.
+By minimum, the DOI must be specified for the driver to work, where [DOI](https://en.wikipedia.org/wiki/Digital_object_identifier) is some identifier for a particular study.
+Additionally, the help menu for the driver can be found by typing the following command:
+
+```
+$ python bibscrap-main.py --h
+```
