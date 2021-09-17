@@ -1,37 +1,30 @@
 # bibscrap
-#### A tool to scrape bibliographies from conference archives
-------
-### Functional Requirements
 
-Given some [DOI](https://en.wikipedia.org/wiki/Digital_object_identifier), `bibscrap` will insert the `title`, `author(s)`, `abstract`, `references`, and `date` into some tabular format (database or [Pandas](https://pandas.pydata.org/docs/))
+**Tools for semi-automatic, systematic literature reviews.**
 
-------
-### Contributors
-- Aidan Killer
-- My Nguyen
-- Sree Datla
-- Matthew Pooser
-- Dr. Michael Cotterell
+## Getting Started (Development)
 
-------------------------
-### Installation
+To download the development version of **bibscrap**, follow the instructions
+provided below:
 
 ```
-$ git clone https://github.com/cotterell/bibscrap.git
+$ git clone -b 2021fa https://github.com/cotterell/bibscrap.git
+$ cd bibscrap
+$ pipenv install
 ```
 
-------------------------
-### Execution
-
-After cloning the repository, a user may use bibscrap by typing in the following command:
+If you are part of the **bibscrap** development team, then you should also
+install the development packages:
 
 ```
-$ python bibscrap-main.py --doi <DOI>  
+$ pipenv install --dev
 ```
 
-By minimum, the DOI must be specified for the driver to work, where [DOI](https://en.wikipedia.org/wiki/Digital_object_identifier) is some identifier for a particular study.
-Additionally, the help menu for the driver can be found by typing the following command:
+## Contributors
 
-```
-$ python bibscrap-main.py --h
-```
+| Contributor          | GitHub        | Role       |
+|----------------------|---------------|------------|
+| Aidan Killer         | @aikill       | Developer  |
+| Matthew Pooser       | @mpooser      | Developer  |
+| Michael E. Cotterell | @mepcotterell | Maintainer |
+| My Nguyen            | @mynguyen0628 | Developer  |
