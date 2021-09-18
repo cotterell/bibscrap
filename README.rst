@@ -8,7 +8,7 @@
       :target: https://bibscrap.readthedocs.io/en/latest/
       :alt: bibscrap's documentation
 
-   .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+   .. image:: https://img.shields.io/badge/code%20style-black-161b22.svg
       :target: https://github.com/psf/black
       :alt: Code style: black
 
