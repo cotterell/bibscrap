@@ -4,6 +4,9 @@
       :target: https://pypi.org/project/bibscrap/
       :alt: PyPI version
 
+   .. image:: https://app.travis-ci.com/cotterell/bibscrap.svg?branch=2021fa
+      :target: https://app.travis-ci.com/cotterell/bibscrap
+
    .. image:: https://img.shields.io/pypi/l/bibscrap.svg
       :target: https://pypi.org/project/bibscrap/
       :alt: MIT license
