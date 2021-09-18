@@ -9,6 +9,7 @@ name = "pypi"
 black = "*"
 pre-commit = "*"
 sphinx = "*"
+sphinx-rtd-theme = "*"
 
 [requires]
 python_version = "3.9"
