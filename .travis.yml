@@ -9,3 +9,6 @@ install:
 script:
   - black -v --check .
   - pytest
+jobs:
+  include:
+    - python: 3.9
