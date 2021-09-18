@@ -1,2 +1,7 @@
-install: pip3 install pipenv && python3 -m pipenv install --dev
+language: python
+before_install:
+  - python -m pip install --upgrade pip
+install:
+  - pip install pipenv
+  - pipenv install --dev
 script: pytest
