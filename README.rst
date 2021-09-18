@@ -23,9 +23,28 @@
  bibscrap
 ==========
 
-**Tools for semi-automated systematic literature reviews.**
+Overview
+========
 
-Getting Started (Development)
+The **bibscrap** package provides tools for semi-automated systematic literature reviews.
+
+Requirements
+============
+
+* Python 3.9+
+
+Install
+=======
+
+TODO
+
+Documentation
+=============
+
+Documentation is available online at https://bibscrap.readthedocs.io/ and in the
+``docs`` directory.
+
+Contributors: Getting Started
 =============================
 
 To download the development version of **bibscrap**, follow the instructions
