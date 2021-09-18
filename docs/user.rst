@@ -1,7 +1,7 @@
 User's Guide
 ============
 
-Overview
---------
+Introduction
+------------
 
 TODO

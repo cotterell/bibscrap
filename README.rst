@@ -1,8 +1,12 @@
 .. header::
 
    .. image:: https://badge.fury.io/py/bibscrap.svg
-      :target: https://badge.fury.io/py/bibscrap
+      :target: https://pypi.org/project/bibscrap/
       :alt: PyPI version
+
+   .. image:: https://img.shields.io/pypi/l/bibscrap.svg
+      :target: https://pypi.org/project/bibscrap/
+      :alt: MIT license
 
    .. image:: https://readthedocs.org/projects/bibscrap/badge/?version=latest
       :target: https://bibscrap.readthedocs.io/en/latest/
@@ -12,9 +16,9 @@
       :target: https://github.com/psf/black
       :alt: Code style: black
 
-========
-bibscrap
-========
+==========
+ bibscrap
+==========
 
 **Tools for semi-automated systematic literature reviews.**
 
