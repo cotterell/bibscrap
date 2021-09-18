@@ -9,16 +9,18 @@
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-#
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
 
+from datetime.datetime import now
+
+import os
+import sys
+
+sys.path.insert(0, os.path.abspath(".."))
 
 # -- Project information -----------------------------------------------------
 
 project = "bibscrap"
-copyright = "2021, Michael E. Cotterell"
+copyright = f"2020–{now().year}, Michael E. Cotterell and the University of Georgia"
 author = "Michael E. Cotterell"
 
 
