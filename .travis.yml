@@ -7,8 +7,8 @@ install:
   - pip install pipenv
   - pipenv install --dev
 script:
-  - black -v --check .
-  - pytest
+  - pipenv run black -v --check .
+  - pipenv run pytest
 jobs:
   include:
     - python: 3.9
