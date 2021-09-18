@@ -1,27 +1,25 @@
-.. header::
+========
+bibscrap
+========
 
-   ==========
-   bibscrap
-   ==========
+.. image:: https://badge.fury.io/py/bibscrap.svg
+   :target: https://pypi.org/project/bibscrap/
+   :alt: PyPI version
 
-   .. image:: https://badge.fury.io/py/bibscrap.svg
-      :target: https://pypi.org/project/bibscrap/
-      :alt: PyPI version
+.. image:: https://app.travis-ci.com/cotterell/bibscrap.svg?branch=2021fa
+   :target: https://app.travis-ci.com/cotterell/bibscrap
 
-   .. image:: https://app.travis-ci.com/cotterell/bibscrap.svg?branch=2021fa
-      :target: https://app.travis-ci.com/cotterell/bibscrap
+.. image:: https://img.shields.io/pypi/l/bibscrap.svg
+   :target: https://pypi.org/project/bibscrap/
+   :alt: MIT license
 
-   .. image:: https://img.shields.io/pypi/l/bibscrap.svg
-      :target: https://pypi.org/project/bibscrap/
-      :alt: MIT license
+.. image:: https://readthedocs.org/projects/bibscrap/badge/?version=latest
+   :target: https://bibscrap.readthedocs.io/en/latest/
+   :alt: bibscrap's documentation
 
-   .. image:: https://readthedocs.org/projects/bibscrap/badge/?version=latest
-      :target: https://bibscrap.readthedocs.io/en/latest/
-      :alt: bibscrap's documentation
-
-   .. image:: https://img.shields.io/badge/code%20style-black-161b22.svg
-      :target: https://github.com/psf/black
-      :alt: Code style: black
+.. image:: https://img.shields.io/badge/code%20style-black-161b22.svg
+   :target: https://github.com/psf/black
+   :alt: Code style: black
 
 Overview
 ========
