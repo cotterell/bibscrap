@@ -12,9 +12,7 @@
 bibscrap
 ========
 
--------------------------------------------------------
-Tools for semi-automated systematic literature reviews.
--------------------------------------------------------
+**Tools for semi-automated systematic literature reviews.**
 
 Getting Started (Development)
 =============================
