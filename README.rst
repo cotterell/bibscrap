@@ -1,35 +1,46 @@
-[![PyPI version](https://badge.fury.io/py/bibscrap.svg)](https://badge.fury.io/py/bibscrap)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+.. header::
 
-# bibscrap
+   .. image:: https://badge.fury.io/py/bibscrap.svg
+      :target: https://badge.fury.io/py/bibscrap
+      :alt: PyPI version
 
-**Tools for semi-automated systematic literature reviews.**
+   .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+      :target: https://github.com/psf/black
+      :alt: Code style: black
 
-## Getting Started (Development)
+========
+bibscrap
+========
+
+-------------------------------------------------------
+Tools for semi-automated systematic literature reviews.
+-------------------------------------------------------
+
+Getting Started (Development)
+=============================
 
 To download the development version of **bibscrap**, follow the instructions
-provided below:
+provided below::
 
-```
-$ git clone -b 2021fa https://github.com/cotterell/bibscrap.git
-$ cd bibscrap
-$ pipenv shell
-$ pipenv install
-```
+  $ git clone -b 2021fa https://github.com/cotterell/bibscrap.git
+  $ cd bibscrap
+  $ pipenv shell
+  $ pipenv install
 
 If you are part of the **bibscrap** development team, then you should also
-install the development packages:
+install the development packages::
 
-```
-$ pipenv install --dev
-$ pre-commit install
-```
+  $ pipenv install --dev
+  $ pre-commit install
 
-## Contributors
+Contributors
+============
 
-| Contributor          | GitHub        | Role       |
-|----------------------|---------------|------------|
-| Aidan Killer         | @aikill       | Developer  |
-| Matthew Pooser       | @mpooser      | Developer  |
-| Michael E. Cotterell | @mepcotterell | Maintainer |
-| My Nguyen            | @mynguyen0628 | Developer  |
+=====================  ==============  ============
+Contributor            GitHub          Role
+=====================  ==============  ============
+Aidan Killer           @aikill         Developer
+Matthew Pooser         @mpooser        Developer
+Michael E. Cotterell   @mepcotterell   Maintainer
+My Nguyen              @mynguyen0628   Developer
+=====================  ==============  ============
