@@ -1,6 +1,6 @@
 language: python
 env:
-  - PIPENV_VERBOSITY=-1
+  - PIPENV_VERBOSITY=1
 before_install:
   - python -m pip install --upgrade pip
 install:
