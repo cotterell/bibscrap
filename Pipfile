@@ -8,6 +8,7 @@ name = "pypi"
 [dev-packages]
 black = "*"
 pre-commit = "*"
+sphinx = "*"
 
 [requires]
 python_version = "3.9"
