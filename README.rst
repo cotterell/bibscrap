@@ -1,5 +1,9 @@
 .. header::
 
+   ==========
+   bibscrap
+   ==========
+
    .. image:: https://badge.fury.io/py/bibscrap.svg
       :target: https://pypi.org/project/bibscrap/
       :alt: PyPI version
@@ -18,10 +22,6 @@
    .. image:: https://img.shields.io/badge/code%20style-black-161b22.svg
       :target: https://github.com/psf/black
       :alt: Code style: black
-
-==========
- bibscrap
-==========
 
 Overview
 ========
