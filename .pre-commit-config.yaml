@@ -1,9 +1,13 @@
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.3.0
+    rev: v4.0.1
     hooks:
+    -   id: check-merge-conflict
+    -   id: check-toml
     -   id: check-yaml
     -   id: end-of-file-fixer
+    -   id: mixed-line-ending
+    -   id: name-tests-test
     -   id: trailing-whitespace
 -   repo: https://github.com/psf/black
     rev: 21.9b0
