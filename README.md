@@ -10,6 +10,7 @@ provided below:
 ```
 $ git clone -b 2021fa https://github.com/cotterell/bibscrap.git
 $ cd bibscrap
+$ pipenv shell
 $ pipenv install
 ```
 
@@ -18,6 +19,7 @@ install the development packages:
 
 ```
 $ pipenv install --dev
+$ pre-commit install
 ```
 
 ## Contributors
