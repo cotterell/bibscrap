@@ -1,2 +1,2 @@
-install: pipenv install --dev
+install: pip3 install pipenv && python3 -m pipenv install --dev
 script: pytest
