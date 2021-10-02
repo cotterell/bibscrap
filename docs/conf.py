@@ -24,7 +24,7 @@ copyright = f"{years}, {author} and the University of Georgia"
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinxcontrib.bibtex',
+    "sphinxcontrib.bibtex",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -50,9 +50,9 @@ html_static_path = ["_static"]
 # These paths are either relative to html_static_path
 # or fully qualified paths (eg. https://...)
 html_css_files = [
-    'css/refs.css',
+    "css/refs.css",
 ]
 
 # -- Options for sphinxcontrib-bibtex ----------------------------------------
 
-bibtex_bibfiles = ['refs.bib']
+bibtex_bibfiles = ["refs.bib"]
