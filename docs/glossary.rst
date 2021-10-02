@@ -5,4 +5,4 @@ Glossary
 
    SLR
    systematic literature review
-       A methodologically rigorous review of research results :cite:`kitchenhamSystematicLiteratureReviews2009`.
+       A methodologically rigorous review of research results :cite:`kitchenhamSystematicLiteratureReviews2009,kitchenhamProceduresPerformingSystematic2004`.
