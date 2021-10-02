@@ -1,0 +1,3 @@
+*:target ~ dl {
+    background: gray;
+}

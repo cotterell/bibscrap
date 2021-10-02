@@ -11,6 +11,7 @@ pre-commit = "*"
 sphinx = "*"
 sphinx-rtd-theme = "*"
 pytest = "*"
+sphinxcontrib-bibtex = "*"
 
 [requires]
 python_version = "3.9"

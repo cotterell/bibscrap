@@ -1,10 +1,18 @@
 bibscrap
 ========
 
-**Tools for semi-automated systematic literature reviews.**
+Tools for semi-automated :term:`systematic literature reviews <SLR>`.
 
-.. toctree::
+.. comment
+   toctree::
    :maxdepth: 1
    :caption: Getting Started
 
    overview
+   slr
+
+.. toctree::
+   :maxdepth: 1
+
+   glossary
+   refs
