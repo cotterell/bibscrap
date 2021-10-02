@@ -13,6 +13,7 @@ Tools for semi-automated :term:`systematic literature reviews <SLR>`.
 
 .. toctree::
    :maxdepth: 1
+   :caption: Appendices
 
    glossary
    refs
