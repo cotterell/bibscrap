@@ -8,5 +8,4 @@ build:
 python:
    version: 3.9
    install:
-    - method: pip
-      path: sphinxcontrib-bibtex
+    - requirements: docs/requirements.txt
