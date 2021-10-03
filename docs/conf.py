@@ -72,13 +72,16 @@ exclude_patterns = [
 ]
 
 rst_prolog = """
-.. admonition:: Early Alpha Development
+.. admonition:: Early Alpha
    :class: danger alert
 
-   Bibscrap is still in early alpha development. As such, the documentation
-   presented on this site may not reflect the latest code available in the
-   project's GitHub repository. It may also contain TODO items for intended
-   documentation and software features.
+   Bibscrap is still in its **early alpha** development phase. As such, the
+   documentation presented on this site may not reflect the latest code
+   available in the project's GitHub repository. It may also contain TODO items
+   for intended documentation and software features.
+
+----
+
 """
 
 # -- Options for HTML output -------------------------------------------------
