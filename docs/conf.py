@@ -41,9 +41,12 @@ needs_sphinx = "4.2"
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-extensions
 extensions = [
+    "sphinx.ext.napoleon",
+    "sphinx.ext.autodoc",
+    "sphinx.ext.todo",
     "sphinx_rtd_theme",
     "sphinxcontrib.bibtex",
-    "mepcott.acmref",
+    "bibscrap.sphinx.acmref",
 ]
 
 # Refuse to build if certain extensions are too old.
@@ -81,7 +84,11 @@ rst_prolog = """
    for intended documentation and software features.
 
 ----
+"""
 
+rst_epilog = """
+.. |LaTeX| replace:: :math:`{\mathrm{\LaTeX}}`
+.. |BibTeX| replace:: :math:`{\mathrm{B{\scriptstyle{IB}} \! T\!_{\displaystyle E} \! X}}`
 """
 
 # -- Options for HTML output -------------------------------------------------
@@ -128,8 +135,21 @@ html_static_path = [
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_css_files
 html_css_files = [
     "css/rtd.css",
+    "css/todolist.css",
     "css/refs.css",
 ]
+
+# -- Options for sphinx.ext.todo ---------------------------------------------
+
+# If ``todo_include_todos`` is ``True``, the ``.. todo::`` and ``.. todolist::``
+# directives produce output, else they produce nothing (default is ``False``).
+# https://www.sphinx-doc.org/en/master/usage/extensions/todo.html#confval-todo_include_todos
+todo_include_todos = True
+
+# If ``todo_link_only`` is ``True``, the ``.. todolist::`` directive produces
+# output without file path and line (default is ``False``).
+# https://www.sphinx-doc.org/en/master/usage/extensions/todo.html#confval-todo_link_only
+todo_link_only = True
 
 # -- Options for sphinxcontrib-bibtex ----------------------------------------
 

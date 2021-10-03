@@ -21,3 +21,7 @@ Planned Tools
    Bibscrap Fetch   ``bibscrap.fetch``
    Bibscrap Filter  ``bibscrap.filter``
    ===============  ===================
+
+.. todo:: testing this out!
+
+.. note:: testing this too!
