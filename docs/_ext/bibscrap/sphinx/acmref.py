@@ -6,10 +6,6 @@ class (``ACMRefStyle``) that closely mimics the |acm_style|_ described in
 of the |acm|_ using |BibTeX|. The module itself is also a Sphinx extension that
 registers the styles for use by the |sphinxcontrib_bibtex|_ extension.
 
-Install the module with pip install sphinxcontrib-bibtex, or from source using pip install -e .. Then add:
-
-extensions = ['sphinxcontrib.bibtex']
-
 .. |acm_style| replace:: ACM Citation Style and Reference Formats
 .. _acm_style: https://www.acm.org/publications/authors/reference-formatting
 
