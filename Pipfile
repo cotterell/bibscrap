@@ -12,6 +12,9 @@ sphinx = "*"
 sphinx-rtd-theme = "*"
 pytest = "*"
 sphinxcontrib-bibtex = "*"
+enum-tools = "*"
+sphinx-toolbox = "*"
+sphinxcontrib-inlinesyntaxhighlight = "*"
 
 [requires]
 python_version = "3.9"

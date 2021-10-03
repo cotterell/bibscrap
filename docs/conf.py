@@ -75,6 +75,10 @@ exclude_patterns = [
 ]
 
 rst_prolog = """
+.. role:: python(code)
+   :class: highlight
+   :language: python
+
 .. admonition:: Early Alpha
    :class: danger alert
 
@@ -158,3 +162,7 @@ bibtex_bibfiles = [
 ]
 
 bibtex_default_style = "plain"
+
+# -- Options for sphinx.ext.autodoc ------------------------------------------
+
+autoclass_content = "both"

@@ -18,6 +18,19 @@ Introduction
 
 .. automodule:: bibscrap.sphinx.acmref
    :members:
+   :exclude-members: ABBREVIATIONS
+
+.. py:data:: ABBREVIATIONS
+   :type: dict[str, str]
+
+   Dictionary that maps journal and proceedings names to their canonical
+   abbreviations:
+
+   .. code:: python
+
+      >>> from bibscrap.sphinx.acmref import ABBREVIATIONS as abbrv
+      >>> abbrv.get("ACM Transactions on Mathematical Software")
+      'ACM Trans. Math. Software'
 
 Installation
 ------------

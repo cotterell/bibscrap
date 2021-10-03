@@ -19,15 +19,21 @@ registers the styles for use by the |sphinxcontrib_bibtex|_ extension.
 .. _acm: https://www.acm.org/
 """
 
+from enum import Enum, unique, auto
+from enum_tools.documentation import INTERACTIVE, document_enum
 from pybtex import plugin as pybtex_plugin
 from pybtex.style.formatting import unsrt
 from sphinx.locale import __
 from sphinx.util import logging
 from sphinx.util.console import bold
 
+INTERACTIVE = True
+
 logger = logging.getLogger(__name__)
 
-JOURNAL_CANON_ABBREV = {
+#: Dictionary that maps journal and proceedings names to their canonical
+#: abbreviations.
+ABBREVIATIONS = {
     "ACM Computing Surveys": "Comput. Surveys",
     "ACM Transactions on Mathematical Software": "ACM Trans. Math. Software",
     "ACM SIGNUM Newsletter": "ACM SIGNUM Newslett.",
@@ -96,14 +102,24 @@ JOURNAL_CANON_ABBREV = {
     "USSR Computational Mathematics and Mathematical Physics": "U. S. S. R. Comput. Math. and Math. Phys.",
     "Zeitschrift fur Angewandte Mathematik und Mechanik": "Z. Angew. Math. Mech.",
     "Zeitschrift fur Angewandte Mathematik und Physik": "Z. Angew. Math. Phys.",
-}  # JOURNAL_CANON_ABBREV
+}  # ABBREVIATIONS
 
 
 class ACMRefStyle(unsrt.Style):
-    """ACM Reference Format style."""
+    """ACM Reference Format style.
 
-    def __init__(self):
+    Args:
+        abbreviate (bool) : Whether or not to convert ``journal`` and
+            ``booktitle`` entry keys to their canonical abbreviations, defaults
+            to :python:`False`.
+    """
+
+    def __init__(self, abbreviate: bool = False):
         super().__init__()
+
+    def format_names(self, role, as_sentence=True):
+        """ """
+        return super().format_names(role, as_sentence)
 
 
 def setup(app):
