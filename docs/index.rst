@@ -1,4 +1,4 @@
-bibscrap
+Bibscrap
 ========
 
 Tools for semi-automated :term:`systematic literature reviews <SLR>`.
