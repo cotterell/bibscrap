@@ -13,6 +13,9 @@ bibscrap.spinx.acmref
 
    The contents of this module are still in the planning phase.
 
+Introduction
+------------
+
 .. automodule:: bibscrap.sphinx.acmref
    :members:
 
