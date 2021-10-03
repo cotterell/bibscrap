@@ -14,7 +14,7 @@ sys.path.append(os.path.abspath("./_ext"))  # custom sphinx extensions
 
 # -- Project information -----------------------------------------------------
 
-project = "bibscrap"
+project = "Bibscrap"
 years = f"2020–{datetime.now().year}"
 author = "Michael E. Cotterell"
 copyright = f"{years}, {author} and the University of Georgia"
@@ -77,11 +77,13 @@ exclude_patterns = [
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_theme
 html_theme = "sphinx_rtd_theme"
 
+html_logo = "_static/img/bibscrap.svg"
+
 # Dictionary of options that influence the look and feel of the selected theme.
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_theme_options
 # https://sphinx-rtd-theme.readthedocs.io/en/stable/configuring.html#theme-options
 html_theme_options = {
-    "logo_only": False,
+    "logo_only": True,
     "includehidden": False,
     "display_version": True,
     "prev_next_buttons_location": "bottom",
@@ -112,9 +114,14 @@ html_static_path = [
 # attributes of the corresponding ``<link>`` tag (it defaults to an empty list).
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_css_files
 html_css_files = [
+    "css/rtd.css",
     "css/refs.css",
 ]
 
 # -- Options for sphinxcontrib-bibtex ----------------------------------------
 
-bibtex_bibfiles = ["refs.bib"]
+bibtex_bibfiles = [
+    "refs.bib",
+]
+
+bibtex_default_style = "plain"
