@@ -9,9 +9,8 @@ rigorous, often affording hypothesis testing related to real research questions
 about the literature; however, that rigor also means more work for SLR authors,
 especially when it comes to data collection and unbiased filtering.
 
-Still In Initial Development
-============================
-
+Planned Tools
+=============
 
 .. table::
    :align: center
