@@ -88,7 +88,7 @@ html_theme_options = {
     "display_version": True,
     "prev_next_buttons_location": "bottom",
     "style_external_links": True,
-    "vcs_pageview_mode": "view",
+    "vcs_pageview_mode": "tree",
     "style_nav_header_background": "#BA0C2F",
 }
 
