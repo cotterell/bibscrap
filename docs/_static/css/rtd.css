@@ -3,3 +3,21 @@
     height: unset;
     width: 100%;
 }
+
+.wy-nav-content {
+    padding: 1.618em 2.236em;
+}
+
+.rst-content .admonition.alert p {
+    font-size: 80%;
+    line-height: initial;
+}
+
+.rst-content .admonition.alert {
+    border: .1rem solid #ea6053;
+}
+
+.rst-content .admonition.alert > .admonition-title {
+    color: black;
+    border-bottom: .1rem solid #ea6053;
+}

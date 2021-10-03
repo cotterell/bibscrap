@@ -71,6 +71,16 @@ exclude_patterns = [
     "**/#*#",  # Emaxs autosave file
 ]
 
+rst_prolog = """
+.. admonition:: Early Alpha Development
+   :class: danger alert
+
+   Bibscrap is still in early alpha development. As such, the documentation
+   presented on this site may not reflect the latest code available in the
+   project's GitHub repository. It may also contain TODO items for intended
+   documentation and software features.
+"""
+
 # -- Options for HTML output -------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.
@@ -87,7 +97,7 @@ html_theme_options = {
     "includehidden": False,
     "display_version": True,
     "prev_next_buttons_location": "bottom",
-    "style_external_links": True,
+    "style_external_links": False,
     "vcs_pageview_mode": "blob",
     "style_nav_header_background": "#BA0C2F",
 }

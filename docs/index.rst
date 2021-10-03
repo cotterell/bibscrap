@@ -1,15 +1,15 @@
+========
 Bibscrap
 ========
 
-Tools for semi-automated :term:`systematic literature reviews <SLR>`.
+The **bibscrap** package provides semi-automated tools for
+:term:`systematic literature reviews <SLR>`.
 
-.. comment
-   toctree::
+.. toctree::
    :maxdepth: 1
    :caption: Getting Started
 
    overview
-   slr
 
 .. toctree::
    :maxdepth: 1
