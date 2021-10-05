@@ -24,7 +24,7 @@ bibscrap
 Overview
 ========
 
-The **bibscrap** package provides tools for semi-automated systematic literature reviews.
+The **bibscrap** package provides semi-automated tools for systematic literature reviews.
 
 Requirements
 ============
