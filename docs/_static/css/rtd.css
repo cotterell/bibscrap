@@ -1,4 +1,4 @@
-.wy-nav-top, .wy-nav-top a {
+.wy-nav-top, .wy-nav-top a, .wy-side-nav-search>div.version {
     color: var(--uga-sanford-4);
 }
 
