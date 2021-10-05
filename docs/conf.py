@@ -113,7 +113,7 @@ html_theme_options = {
     "prev_next_buttons_location": "bottom",
     "style_external_links": False,
     "vcs_pageview_mode": "blob",
-    "style_nav_header_background": "#BA0C2F",
+    "style_nav_header_background": "var(--uga-creamery)",
 }
 
 # Dictionary of values to pass into the template engine’s context for all pages.
@@ -138,6 +138,7 @@ html_static_path = [
 # attributes of the corresponding ``<link>`` tag (it defaults to an empty list).
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_css_files
 html_css_files = [
+    "css/colors.css",
     "css/rtd.css",
     "css/todolist.css",
     "css/refs.css",
