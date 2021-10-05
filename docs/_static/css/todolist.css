@@ -20,3 +20,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.todolist > .todo-source > a.reference.internal::before {
+    content: "➥";
+    margin-right: 0.5em;
+}
