@@ -16,6 +16,10 @@ The **bibscrap** package provides semi-automated tools for
    :caption: Appendices
 
    sphinxext
+   To Do <todo>
+
+.. toctree::
+   :hidden:
+
    glossary
    refs
-   todo

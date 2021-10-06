@@ -12,6 +12,14 @@
     border-color: var(--uga-creamery-2);
 }
 
+.wy-menu hr {
+    border-top: 1px solid var(--uga-sanford);
+}
+
+.wy-menu-vertical header, .wy-menu-vertical p.caption {
+    color: var(--uga-creamery-1);
+}
+
 .wy-nav-content {
     padding: 1.618em 2.236em;
 }
