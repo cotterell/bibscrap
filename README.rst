@@ -62,11 +62,14 @@ install the development packages::
 Contributors
 ============
 
-=====================  ==============  ============
-Contributor            GitHub          Role
-=====================  ==============  ============
-Aidan Killer           @aikill         Developer
-Matthew Pooser         @mpooser        Developer
-Michael E. Cotterell   @mepcotterell   Maintainer
-My Nguyen              @mynguyen0628   Developer
-=====================  ==============  ============
+=====================  ================  ============
+Contributor            GitHub            Role
+=====================  ================  ============
+Aidan Killer           @aikill           Developer
+Matthew Pooser         @mpooser          Developer
+Michael E. Cotterell   |mepcotterell|_   Maintainer
+My Nguyen              @mynguyen0628     Developer
+=====================  ================  ============
+
+.. |mepcotterell| replace:: @mepcotterell
+.. _mepcotterell: https://github.com/mepcotterell
