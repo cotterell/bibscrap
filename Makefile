@@ -7,7 +7,7 @@ bold := $(shell tput bold)
 sgr0 := $(shell tput sgr0)
 
 .PHONY:
-help:  ## Show this help.
+help:  ## show this help
 	@echo "$(bold)bibscrap Makefile$(sgr0)"
 	@echo "Please use 'make target' where target is one of:"
 	@cat $(MAKEFILE_LIST) \
