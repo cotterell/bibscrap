@@ -15,7 +15,8 @@ testupload: build
 
 .PHONY: upload
 upload: build
-	pipenv run twine upload --repository testpypi dist/*
+	pipenv run twine check dist/*
+	pipenv run twine upload dist/*
 
 .PHONY: conduct
 conduct:
