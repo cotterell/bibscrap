@@ -2,4 +2,9 @@
 
 __import__("pkg_resources").declare_namespace(__name__)
 
-__version__ = "0.0.3.dev0"
+__version__ = "0.0.3.dev1"
+
+
+def main(args: list = None) -> int:
+    print("Coming soon!")
+    return 0

@@ -2,12 +2,6 @@ import argparse
 import bibscrap
 import sys
 
-
-def main(args: list = None) -> int:
-    print("Coming soon!")
-    return 0
-
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         prog="bibscrap",
@@ -22,4 +16,4 @@ if __name__ == "__main__":
         version=f"%(prog)s {bibscrap.__version__}",
     )
     args = parser.parse_args()
-    sys.exit(main(args))
+    sys.exit(bibscrap.main(args))
