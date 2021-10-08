@@ -13,7 +13,7 @@ import logging
 
 __import__("pkg_resources").declare_namespace(__name__)
 
-__version__ = "0.0.5.dev0"
+__version__ = "0.0.5.dev1"
 __version_info__ = __version__.split(".")
 
 logger = logging.getLogger(__name__)
