@@ -2,11 +2,11 @@
 bibscrap
 ========
 
-.. image:: https://badge.fury.io/py/bibscrap.svg
+.. image:: https://img.shields.io/pypi/v/bibscrap
    :target: https://pypi.org/project/bibscrap/
    :alt: PyPI version
 
-.. image:: https://app.travis-ci.com/cotterell/bibscrap.svg?branch=2021fa
+.. image:: https://app.travis-ci.com/cotterell/bibscrap.svg
    :target: https://app.travis-ci.com/cotterell/bibscrap
 
 .. image:: https://img.shields.io/pypi/l/bibscrap.svg
