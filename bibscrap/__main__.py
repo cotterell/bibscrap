@@ -3,17 +3,4 @@ import bibscrap
 import sys
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(
-        prog="bibscrap",
-        description="Semi-automated tools for systematic literature reviews.",
-        epilog="""Submit bugs, issue, and feature requests at
-        https://github.com/cotterell/bibscrap/issues.
-        """,
-    )
-    parser.add_argument(
-        "--version",
-        action="version",
-        version=f"%(prog)s {bibscrap.__version__}",
-    )
-    args = parser.parse_args()
-    sys.exit(bibscrap.main(args))
+    sys.exit(bibscrap.main())
