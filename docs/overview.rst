@@ -18,10 +18,7 @@ Planned Tools
    ===============  ===================
    Tool             Module
    ===============  ===================
+   Bibscrap Find    ``bibscrap.find``
    Bibscrap Fetch   ``bibscrap.fetch``
    Bibscrap Filter  ``bibscrap.filter``
    ===============  ===================
-
-.. todo:: testing this out!
-
-.. note:: testing this too!

@@ -20,7 +20,6 @@ registers the styles for use by the |sphinxcontrib_bibtex|_ extension.
 """
 
 from enum import Enum, unique, auto
-from enum_tools.documentation import INTERACTIVE, document_enum
 from pybtex import plugin as pybtex_plugin
 from pybtex.style.formatting import unsrt
 from sphinx.locale import __
@@ -31,8 +30,6 @@ INTERACTIVE = True
 
 logger = logging.getLogger(__name__)
 
-#: Dictionary that maps journal and proceedings names to their canonical
-#: abbreviations.
 ABBREVIATIONS = {
     "ACM Computing Surveys": "Comput. Surveys",
     "ACM Transactions on Mathematical Software": "ACM Trans. Math. Software",

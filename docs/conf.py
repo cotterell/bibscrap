@@ -1,5 +1,6 @@
 from datetime import datetime
 
+import importlib
 import os
 import sys
 
@@ -18,6 +19,8 @@ project = "Bibscrap"
 years = f"2020–{datetime.now().year}"
 author = "Michael E. Cotterell"
 copyright = f"{years}, {author} and the University of Georgia"
+version = importlib.import_module("bibscrap").__version__
+revision = os.popen("git rev-parse --short HEAD").read().strip()
 
 branch = os.popen("git branch --show-current").read().strip()
 licenses = {
@@ -79,13 +82,12 @@ rst_prolog = """
    :class: highlight
    :language: python
 
-.. admonition:: Early Alpha
+.. admonition:: Development Status :: 2 - Pre-Alpha
    :class: danger alert
 
-   Bibscrap is still in its **early alpha** development phase. As such, the
-   documentation presented on this site may not reflect the latest code
-   available in the project's GitHub repository. It may also contain TODO items
-   for intended documentation and software features.
+   Bibscrap is still in its **pre-alpha** development phase. This is the
+   earliest stage of software development. The project is still establishing its
+   requirement, and it contains code that is not yet feature-complete.
 
 ----
 """

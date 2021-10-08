@@ -34,7 +34,13 @@ Requirements
 Install
 =======
 
-TODO
+To install Bibscrap using **pipenv**::
+
+  $ pipenv install --pre bibscrap
+
+To install Bibscrap using **pip**::
+
+  $ pip install --pre bibscrap
 
 Documentation
 =============
@@ -48,7 +54,7 @@ Contributors: Getting Started
 To download the development version of **bibscrap**, follow the instructions
 provided below::
 
-  $ git clone -b 2021fa https://github.com/cotterell/bibscrap.git
+  $ git clone https://github.com/cotterell/bibscrap.git
   $ cd bibscrap
   $ pipenv shell
   $ pipenv install
@@ -62,11 +68,13 @@ install the development packages::
 Contributors
 ============
 
-=====================  ==================================================  ============
-Contributor            GitHub                                              Role
-=====================  ==================================================  ============
-Aidan Killer           `@aikill <https://github.com/aikill>`_              Developer
-Matthew Pooser         `@mpooser <https://github.com/mpooser>`_            Developer
-Michael E. Cotterell   `@mepcotterell <https://github.com/mepcotterell>`_  Maintainer
-My Nguyen              `@mynguyen0628 <https://github.com/mynguyen0628>`_  Developer
-=====================  ==================================================  ============
+=====================  ==========================================================  ============
+Contributor            GitHub                                                      Role
+=====================  ==========================================================  ============
+Aidan Killer           `@aikill <https://github.com/aikill>`_                      Developer
+Jack Solomon           `@jbs26156 <https://github.com/jbs26156>`_                  Developer
+Matthew Pooser         `@mpooser <https://github.com/mpooser>`_                    Developer
+Michael E. Cotterell   `@mepcotterell <https://github.com/mepcotterell>`_          Maintainer
+Mitchell Casleton      `@MitchellCasleton <https://github.com/MitchellCasleton>`_  Developer
+My Nguyen              `@mynguyen0628 <https://github.com/mynguyen0628>`_          Developer
+=====================  ==========================================================  ============
