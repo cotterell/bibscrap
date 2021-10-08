@@ -1,0 +1,14 @@
+language: python
+env:
+  - PIPENV_IGNORE_VIRTUALENVS=1
+before_install:
+  - python -m pip install --upgrade pip
+install:
+  - pip install pipenv
+  - pipenv install --dev
+script:
+  - pipenv run black -v --check .
+  - pipenv run pytest -v
+jobs:
+  include:
+    - python: 3.9

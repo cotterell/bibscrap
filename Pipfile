@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+scrapy = "*"
+
+[dev-packages]
+black = "*"
+pre-commit = "*"
+sphinx = "*"
+sphinx-rtd-theme = "*"
+pytest = "*"
+sphinxcontrib-bibtex = "*"
+setuptools = "*"
+build = "*"
+twine = "*"
+
+[requires]
+python_version = "3.9"

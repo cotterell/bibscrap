@@ -1,0 +1,29 @@
+{% extends '!layout.html' %}
+
+{%- block menu %}
+  {%- set toctree = toctree(maxdepth=theme_navigation_depth|int,
+                            collapse=theme_collapse_navigation|tobool,
+                            includehidden=theme_includehidden|tobool,
+                            titles_only=theme_titles_only|tobool) %}
+  {%- if toctree %}
+    {{ toctree }}
+  {%- else %}
+    <!-- Local TOC -->
+    <div class="local-toc">{{ toc }}</div>
+  {%- endif %}
+  <hr/>
+  {# BACK MATTER #}
+  <ul>
+    {%- if hasdoc('glossary') %}
+      <li class="toctree-l1"><a class="reference internal" title="{{ _('Glossary') }}" href="{{ pathto('glossary') }}">{{ _('Glossary') }}</a></li>
+    {%- endif %}
+    {%- if hasdoc('refs') %}
+      <li class="toctree-l1"><a class="reference internal" title="{{ _('References') }}" href="{{ pathto('refs') }}">{{ _('References') }}</a></li>
+    {%- endif %}
+    {%- if hasdoc('genindex') %}
+      <li class="toctree-l1"><a class="reference internal" title="{{ _('Index') }}" href="{{ pathto('genindex') }}">{{ _('Index') }}</a></li>
+    {%- endif %}
+  </ul>
+  <hr/>
+
+{%- endblock %}

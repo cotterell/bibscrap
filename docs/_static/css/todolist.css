@@ -1,0 +1,27 @@
+.todolist > .admonition-todo, .todolist > .todo-source {
+    margin-left: 24px;
+}
+
+.todolist > .admonition-todo {
+    display: list-item;
+    list-style: disc;
+    padding: unset;
+    margin-bottom: unset;
+    background: unset;
+}
+
+.todolist > .admonition-todo > .admonition-title {
+    display: none;
+}
+
+.todolist > .admonition-todo > .admonition-title ~ p {
+    width: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.todolist > .todo-source > a.reference.internal::before {
+    content: "➥";
+    margin-right: 0.5em;
+}

@@ -1,0 +1,39 @@
+.wy-nav-top, .wy-nav-top a, .wy-side-nav-search>div.version {
+    color: var(--uga-sanford-4);
+}
+
+.wy-side-nav-search .wy-dropdown>a img.logo,
+.wy-side-nav-search>a img.logo {
+    height: unset;
+    width: 100%;
+}
+
+.wy-side-nav-search input[type=text] {
+    border-color: var(--uga-creamery-2);
+}
+
+.wy-menu hr {
+    border-top: 1px solid var(--uga-sanford);
+}
+
+.wy-menu-vertical header, .wy-menu-vertical p.caption {
+    color: var(--uga-creamery-1);
+}
+
+.wy-nav-content {
+    padding: 1.618em 2.236em;
+}
+
+.rst-content .admonition.alert p {
+    font-size: 80%;
+    line-height: initial;
+}
+
+.rst-content .admonition.alert {
+    border: .1rem solid #ea6053;
+}
+
+.rst-content .admonition.alert > .admonition-title {
+    color: black;
+    border-bottom: .1rem solid #ea6053;
+}
