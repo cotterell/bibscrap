@@ -4,7 +4,7 @@ import argparse
 
 __import__("pkg_resources").declare_namespace(__name__)
 
-__version__ = "0.0.3.dev2"
+__version__ = "0.0.3.dev3"
 
 __arg_parser = argparse.ArgumentParser(
     prog="bibscrap",
@@ -24,5 +24,6 @@ __arg_parser.add_argument(
 
 def main() -> int:
     args = __arg_parser.parse_args()
+    __arg_parser.parse_args(["--version"])
     print("Coming soon!")
     return 0
