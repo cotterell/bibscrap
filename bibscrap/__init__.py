@@ -4,7 +4,7 @@ import argparse
 
 __import__("pkg_resources").declare_namespace(__name__)
 
-__version__ = "0.0.3.dev3"
+__version__ = "0.0.3"
 
 __arg_parser = argparse.ArgumentParser(
     prog="bibscrap",
