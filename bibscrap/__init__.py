@@ -26,5 +26,4 @@ __arg_parser.add_argument(
 def main() -> int:
     args = __arg_parser.parse_args()
     __arg_parser.parse_args(["--version"])
-    print("Coming soon!")
     return 0
