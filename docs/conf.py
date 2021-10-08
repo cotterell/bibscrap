@@ -44,6 +44,7 @@ needs_sphinx = "4.2"
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-extensions
 extensions = [
+    "sphinxarg.ext",
     "sphinx.ext.napoleon",
     "sphinx.ext.autodoc",
     "sphinx.ext.todo",

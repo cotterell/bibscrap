@@ -30,7 +30,7 @@ build: ## Build distribution.
 .PHONY: docs
 docs: docs/_build/html  ## generate documentation
 
-docs/_build/html: $(DOCS_FILES) docs/requirements.txt
+docs/_build/html: $(DOCS_FILES) $(MODULE_FILES) docs/requirements.txt
 	cd docs; pipenv run make clean html
 
 docs/requirements.txt: Pipfile.lock

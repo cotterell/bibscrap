@@ -16,6 +16,7 @@ sphinxcontrib-bibtex = "*"
 setuptools = "*"
 build = "*"
 twine = "*"
+sphinx-argparse = "*"
 
 [requires]
 python_version = "3.9"

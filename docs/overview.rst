@@ -22,3 +22,14 @@ Planned Tools
    Bibscrap Fetch   ``bibscrap.fetch``
    Bibscrap Filter  ``bibscrap.filter``
    ===============  ===================
+
+Command-Line Interface
+======================
+
+.. argparse::
+   :module: bibscrap
+   :func: __arg_parser
+   :prog: bibscrap
+   :noepilog:
+   :nosubcommands:
+   :nodescription:

@@ -1,15 +1,22 @@
 """bibscrap.fetch - fetch references."""
 
 
-def setup(app: "BibscrapApp") -> None:
+def command(app: "bibscrap.BibscrapApp", args: "argparse.Namespace") -> None:
+    print("fetching...")
+    print(args)
 
-    arg_parser = app.register_arg_parser(
+
+def setup(app: "bibscrap.BibscrapApp") -> None:
+
+    arg_parser = app.register_command(
         command="fetch",
-        help="fetch references",
+        brief="Fetch references.",
+        description="Fetch references for a set of articles across a number of horizons.",
+        func=command,
     )
 
     arg_parser.add_argument(
-        "bar",
+        "h",
         type=int,
-        help="bar help",
+        help="The number of horizons.",
     )
