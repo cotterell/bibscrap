@@ -2,7 +2,7 @@
 bibscrap
 ========
 
-.. image:: https://img.shields.io/pypi/v/bibscrap
+.. image:: https://img.shields.io/pypi/v/bibscrap?style=flat
    :target: https://pypi.org/project/bibscrap/
    :alt: PyPI version
 
