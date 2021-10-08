@@ -11,7 +11,7 @@ __arg_parser = argparse.ArgumentParser(
     prog="bibscrap",
     description="Semi-automated tools for systematic literature reviews.",
     epilog="""
-Submit bugs, issue, and feature requests at
+Submit bugs, issues, and feature requests at
 https://github.com/cotterell/bibscrap/issues.
 """,
 )
