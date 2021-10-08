@@ -4,7 +4,7 @@ import argparse
 
 __import__("pkg_resources").declare_namespace(__name__)
 
-__version__ = "0.0.4"
+__version__ = "0.0.5.dev0"
 __version_info__ = __version__.split(".")
 
 __arg_parser = argparse.ArgumentParser(
