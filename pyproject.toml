@@ -7,7 +7,11 @@ build-backend = "setuptools.build_meta"
 
 [tool.pytest.ini_options]
 minversion = "6.0"
-addopts = "-ra -q"
+addopts = "-ra -v"
 testpaths = [
     "tests",
 ]
+log_cli = true
+log_cli_level = "CRITICAL"
+log_file = "pytest.log"
+log_file_level = "DEBUG"
