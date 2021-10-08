@@ -1,6 +1,6 @@
 SHELL:=/bin/bash -O extglob
 DOCS_FILES = $(shell find docs -type f -not -path 'docs/_build/*' -not -path '**/.DS_Store')
-TESTS_FILES = $(shell find tests -type f -name 'test_*.py')
+TESTS_FILES = $(shell find tests -type f -name '*_test.py')
 MODULE_FILES = $(shell find bibscrap -type f -not -path '**/.DS_Store')
 
 bold := $(shell tput bold)
