@@ -1,4 +1,3 @@
-import argparse
 import bibscrap
 import sys
 
