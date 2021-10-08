@@ -9,13 +9,13 @@ bibscrap
 .. image:: https://app.travis-ci.com/cotterell/bibscrap.svg
    :target: https://app.travis-ci.com/cotterell/bibscrap
 
-.. image:: https://img.shields.io/pypi/l/bibscrap.svg
-   :target: https://pypi.org/project/bibscrap/
-   :alt: MIT license
-
 .. image:: https://readthedocs.org/projects/bibscrap/badge/?version=latest
    :target: https://bibscrap.readthedocs.io/en/latest/
    :alt: bibscrap's documentation
+
+.. image:: https://img.shields.io/pypi/l/bibscrap.svg
+   :target: https://github.com/cotterell/bibscrap/blob/master/LICENSE.rst
+   :alt: MIT license
 
 .. image:: https://img.shields.io/badge/code%20style-black-161b22.svg
    :target: https://github.com/psf/black
