@@ -17,6 +17,7 @@ setuptools = "*"
 build = "*"
 twine = "*"
 sphinx-argparse = "*"
+tox = "*"
 
 [requires]
 python_version = "3.9"

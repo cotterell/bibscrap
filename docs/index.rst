@@ -13,6 +13,13 @@ The **bibscrap** package provides semi-automated tools for
 
 .. toctree::
    :maxdepth: 1
+   :caption: Contributing
+
+   contributing
+   Code of Conduct <code_of_conduct>
+
+.. toctree::
+   :maxdepth: 1
    :caption: Appendices
 
    sphinxext

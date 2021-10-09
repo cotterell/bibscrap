@@ -47,7 +47,9 @@ extensions = [
     "sphinxarg.ext",
     "sphinx.ext.napoleon",
     "sphinx.ext.autodoc",
+    "sphinx.ext.autosectionlabel",
     "sphinx.ext.todo",
+    "sphinx.ext.extlinks",
     "sphinx_rtd_theme",
     "sphinxcontrib.bibtex",
     "bibscrap.sphinx.acmref",
@@ -83,6 +85,9 @@ rst_prolog = """
    :class: highlight
    :language: python
 
+.. _issue_tracker: https://github.com/cotterell/bibscrap/issues
+.. _issue_tracker_new: https://github.com/cotterell/bibscrap/issues/new/choose
+
 .. admonition:: Development Status :: 2 - Pre-Alpha
    :class: danger alert
 
@@ -97,6 +102,23 @@ rst_epilog = """
 .. |LaTeX| replace:: :math:`{\mathrm{\LaTeX}}`
 .. |BibTeX| replace:: :math:`{\mathrm{B{\scriptstyle{IB}} \! T\!_{\displaystyle E} \! X}}`
 """
+
+# -- Options for sphinx.ext.autosectionlabel ----------------------------------
+
+autosectionlabel_prefix_document = True
+
+# -- Options for sphinx.ext.extlinks -----------------------------------------
+
+extlinks = {
+    "issue": (
+        "https://github.com/cotterell/bibscrap/issues/%s",
+        "issue %s",
+    ),
+    "docs_latest": (
+        "https://bibscrap.readthedocs.io/en/latest/%s.rst",
+        "https://bibscrap.readthedocs.io/en/latest/%s.rst",
+    ),
+}
 
 # -- Options for HTML output -------------------------------------------------
 

@@ -37,3 +37,12 @@
     color: black;
     border-bottom: .1rem solid #ea6053;
 }
+
+.rst-content p + ul,
+.rst-content p + .docutils.container {
+    margin-top: -1em;
+}
+
+.text-center {
+    text-align: center;
+}
