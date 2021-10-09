@@ -8,7 +8,7 @@ install:
   - pipenv install --dev
 script:
   - pipenv run black -v --check .
-  - pipenv run pytest -v
+  - pipenv run python -m tox -v
 jobs:
   include:
     - python: 3.6
