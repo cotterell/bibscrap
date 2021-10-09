@@ -26,6 +26,8 @@ Planned Tools
 Command-Line Interface
 ======================
 
+Bibscrap offers a command-line interface...
+
 .. argparse::
    :module: bibscrap
    :func: __arg_parser
@@ -33,3 +35,8 @@ Command-Line Interface
    :noepilog:
    :nosubcommands:
    :nodescription:
+
+----
+
+Available Commands
+------------------

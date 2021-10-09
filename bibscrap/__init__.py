@@ -1,11 +1,7 @@
 """Semi-automated tools for systematic literature reviews."""
 
-from typing import (
-    AnyStr,
-    Callable,
-    Optional,
-    TypeVar,
-)
+from gettext import gettext as _
+from typing import AnyStr, Callable, Optional
 
 import argparse
 import importlib
@@ -35,12 +31,14 @@ class BibscrapApp:
 
     def __init__(self):
         self.arg_parser = argparse.ArgumentParser(
-            prog="bibscrap",
-            description="Semi-automated tools for systematic literature reviews.",
-            epilog="""
+            prog=_("bibscrap"),
+            description=_("Semi-automated tools for systematic literature reviews."),
+            epilog=_(
+                """
             Submit bugs, issues, and feature requests at
             https://github.com/cotterell/bibscrap/issues.
-            """,
+            """
+            ),
         )
         self.arg_parser.add_argument(
             "--version",
@@ -48,10 +46,10 @@ class BibscrapApp:
             version=f"%(prog)s {BibscrapApp.VERSION}",
         )
         self.command_subparsers = self.arg_parser.add_subparsers(
-            title="command",
+            title="commands",
             dest="command",
             metavar="<command>",
-            description="These are common Bibscrap commands used in various situations:",
+            required=True,
         )
         self.commands = dict()
 
