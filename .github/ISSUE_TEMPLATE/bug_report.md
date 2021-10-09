@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 **Describe the bug**
-A clear and concise description of what the bug is. If you have never written a bug report before, then please read Simon Tatham's [*How to Report Bugs Effectively*](https://www.chiark.greenend.org.uk/~sgtatham/bugs.html). 
+A clear and concise description of what the bug is. If you have never written a bug report before, then please read Simon Tatham's [*How to Report Bugs Effectively*](https://www.chiark.greenend.org.uk/~sgtatham/bugs.html).
 
 **To Reproduce**
 Steps to reproduce the behavior:

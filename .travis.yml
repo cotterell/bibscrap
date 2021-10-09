@@ -7,7 +7,7 @@ install:
   - pip install pipenv
   - pipenv install --dev
 script:
-  - pipenv run black -v --check .
+  - pipenv run pre-commit -a -v
   - pipenv run python -m tox -v
 jobs:
   include:
