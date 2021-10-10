@@ -106,8 +106,6 @@ class BibscrapApp:
             extension = importlib.import_module(module)
         elif isinstance(module, ModuleType):
             extension = module
-        else:
-            raise TypeError()
 
         if hasattr(extension, "setup"):
             extension.setup(self)
