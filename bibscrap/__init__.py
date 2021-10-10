@@ -25,7 +25,7 @@ def __arg_parser() -> argparse.ArgumentParser:
 
 
 def main() -> int:  # pragma: no cover
-    args = app.arg_parser.parse_args()
+    args = __app.arg_parser.parse_args()
     __app.command(args)
     return 0
 
