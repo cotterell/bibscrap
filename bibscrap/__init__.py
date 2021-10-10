@@ -21,7 +21,7 @@ __app.load_builtin_extensions()
 
 
 def __arg_parser() -> argparse.ArgumentParser:
-    return app.arg_parser
+    return __app.arg_parser
 
 
 def main() -> int:  # pragma: no cover
