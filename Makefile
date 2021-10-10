@@ -18,10 +18,8 @@ help:  ## show this help
         | sed -e 's/^/  /g'
 
 .PHONY: test
-test: pytest.log  ## run unit tests
-
-pytest.log: $(TESTS_FILES) $(MODULE_FILES)
-	pipenv run pytest 2>&1 | tee pytest.log
+test:
+	pipenv run python -m tox
 
 build: ## Build distribution.
 	pipenv run python -m build --wheel --sdist
