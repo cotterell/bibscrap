@@ -1,23 +1,29 @@
-from bibscrap.app import BibscrapApp, builtin_extensions
+"""Tests for the bibscrap module."""
+
+from bibscrap.app import BibscrapApp
 from bibscrap.errors import BibscrapError, BibscrapExtensionTypeError
 from gettext import gettext as _
-from unittest.mock import Mock, create_autospec, patch
+from semver.version import Version
+from unittest.mock import Mock, patch
 
 import argparse
 import bibscrap
 import bibscrap.app
 import io
 import logging
-import unittest
 import pytest
+import unittest
 
 
 log = logging.getLogger(__name__)
 
 
-class BibscrapTest(unittest.TestCase):
-    def test_bibscrap(self):
-        self.assertTrue(True)
+class BibscrapModuleTest(unittest.TestCase):
+    def test_version_is_semver(self):
+        try:
+            version = Version.parse(bibscrap.__version__)
+        except ValueError as invalid_version_error:
+            self.fail(f"bibscrap.__version__: {invalid_version_error!s}")
 
 
 class BibscrapAppTest(unittest.TestCase):
@@ -71,8 +77,8 @@ class BibscrapAppTest(unittest.TestCase):
                 self.app.command(args)
 
     def test_command_valid_args(self):
-        mock_func = Mock()
-        with patch.dict(self.app.commands, {"mock_func": mock_func}, clear=True):
-            args = argparse.Namespace(command="mock_func")
+        mock_command_func = Mock()
+        with patch.dict(self.app.commands, {"mock": mock_command_func}, clear=True):
+            args = argparse.Namespace(command="mock")
             self.app.command(args)
-        mock_func.assert_called()
+        mock_command_func.assert_called()

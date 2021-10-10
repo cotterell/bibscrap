@@ -22,6 +22,7 @@ darglint = "*"
 typing-extensions = "*"
 coverage = "*"
 codecov = "*"
+semver = "*"
 
 [pipenv]
 allow_prereleases = true

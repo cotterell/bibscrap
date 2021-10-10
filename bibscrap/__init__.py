@@ -9,7 +9,7 @@ import sys
 
 __import__("pkg_resources").declare_namespace(__name__)
 
-__version__ = "0.0.5.dev1"
+__version__ = "0.0.5-dev1"
 __version_info__ = __version__.split(".")
 
 __logger = logging.getLogger(__name__)
@@ -20,7 +20,7 @@ __app.VERSION_INFO = __version_info__
 __app.load_builtin_extensions()
 
 
-def __arg_parser() -> argparse.ArgumentParser:
+def __arg_parser() -> argparse.ArgumentParser:  # pragma: no cover
     return __app.arg_parser
 
 
