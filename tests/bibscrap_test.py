@@ -1,9 +1,11 @@
-from bibscrap import BibscrapApp, BibscrapException
+from bibscrap.app import BibscrapApp, builtin_extensions
+from bibscrap.errors import BibscrapError, BibscrapExtensionTypeError
 from gettext import gettext as _
 from unittest.mock import Mock, create_autospec, patch
 
 import argparse
 import bibscrap
+import bibscrap.app
 import io
 import logging
 import unittest
@@ -30,9 +32,9 @@ class BibscrapAppTest(unittest.TestCase):
         self.assertIsInstance(arg_parser, argparse.ArgumentParser)
         self.assertEqual(arg_parser.prog, _("bibscrap"))
 
-    def test_init_command_subparsers(self):
-        command_subparsers = self.app.command_subparsers
-        self.assertIsInstance(command_subparsers, argparse._SubParsersAction)
+    def test_init_command_parsers(self):
+        command_parsers = self.app.command_parsers
+        self.assertIsInstance(command_parsers, argparse._SubParsersAction)
 
     def test_init_app_commands_is_empty_dict(self):
         commands = self.app.commands
@@ -54,9 +56,9 @@ class BibscrapAppTest(unittest.TestCase):
         self.app.arg_parser.parse_args(["--version"])
         mock_exit.assert_called()
 
-    @patch("bibscrap.builtin_extensions", ["math"])
+    @patch("bibscrap.app.builtin_extensions", ["math"])
     def test_load_builtin_extensions(self):
-        with self.assertRaises(BibscrapException):
+        with self.assertRaises(BibscrapExtensionTypeError):
             self.app.load_builtin_extensions()
 
     def test_command_invalid_args(self):
@@ -65,7 +67,7 @@ class BibscrapAppTest(unittest.TestCase):
             argparse.Namespace(),
         ]
         for args in invalid_args:
-            with self.subTest(args=args), self.assertRaises(BibscrapException):
+            with self.subTest(args=args), self.assertRaises(BibscrapError):
                 self.app.command(args)
 
     def test_command_valid_args(self):

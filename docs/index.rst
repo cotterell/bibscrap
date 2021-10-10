@@ -13,6 +13,12 @@ The **bibscrap** package provides semi-automated tools for
 
 .. toctree::
    :maxdepth: 1
+   :caption: Developers
+
+   API <api>
+
+.. toctree::
+   :maxdepth: 1
    :caption: Contributing
 
    contributing

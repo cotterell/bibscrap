@@ -45,11 +45,12 @@ needs_sphinx = "4.2"
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-extensions
 extensions = [
     "sphinxarg.ext",
-    "sphinx.ext.napoleon",
     "sphinx.ext.autodoc",
+    "sphinx.ext.napoleon",
     "sphinx.ext.autosectionlabel",
     "sphinx.ext.todo",
     "sphinx.ext.extlinks",
+    "sphinx.ext.intersphinx",
     "sphinx_rtd_theme",
     "sphinxcontrib.bibtex",
     "bibscrap.sphinx.acmref",
@@ -118,6 +119,12 @@ extlinks = {
         "https://bibscrap.readthedocs.io/en/latest/%s.rst",
         "https://bibscrap.readthedocs.io/en/latest/%s.rst",
     ),
+}
+
+# -- Options for sphinx.ext.intersphinx --------------------------------------
+
+intersphinx_mapping = {
+    "python": ("https://docs.python.org/3", None),
 }
 
 # -- Options for HTML output -------------------------------------------------
@@ -191,4 +198,10 @@ bibtex_default_style = "plain"
 
 # -- Options for sphinx.ext.autodoc ------------------------------------------
 
+autodoc_typehints = "both"
+
 autoclass_content = "both"
+
+autodoc_type_aliases = {
+    "Command": "bibscrap.app.Command",
+}
