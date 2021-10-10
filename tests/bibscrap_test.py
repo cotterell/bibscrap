@@ -58,3 +58,19 @@ class BibscrapAppTest(unittest.TestCase):
     def test_load_builtin_extensions(self):
         with self.assertRaises(BibscrapException):
             self.app.load_builtin_extensions()
+
+    def test_command_invalid_args(self):
+        invalid_args = [
+            None,
+            argparse.Namespace(),
+        ]
+        for args in invalid_args:
+            with self.subTest(args=args), self.assertRaises(BibscrapException):
+                self.app.command(args)
+
+    def test_command_valid_args(self):
+        mock_func = Mock()
+        with patch.dict(self.app.commands, {"mock_func": mock_func}, clear=True):
+            args = argparse.Namespace(command="mock_func")
+            self.app.command(args)
+        mock_func.assert_called()
