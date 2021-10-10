@@ -5,7 +5,7 @@ before_install:
   - python -m pip install --upgrade pip
 install:
   - pip install pipenv
-  - pipenv install --dev
+  - pipenv install --dev --skip-lock
 script:
   - pipenv run python -m tox -v
 jobs:
