@@ -13,6 +13,11 @@ bibscrap
    :target: https://bibscrap.readthedocs.io/en/latest/
    :alt: bibscrap's documentation
 
+
+.. image:: https://codecov.io/gh/cotterell/bibscrap/branch/main/graph/badge.svg?token=TQQWS0OQ0E
+   :target: https://codecov.io/gh/cotterell/bibscrap
+   :alt: Code coverage
+
 .. image:: https://img.shields.io/pypi/l/bibscrap.svg
    :target: https://github.com/cotterell/bibscrap/blob/master/LICENSE.rst
    :alt: MIT license
