@@ -116,8 +116,8 @@ extlinks = {
         "issue %s",
     ),
     "docs_latest": (
-        "https://bibscrap.readthedocs.io/en/latest/%s.rst",
-        "https://bibscrap.readthedocs.io/en/latest/%s.rst",
+        "https://bibscrap.readthedocs.io/en/latest/%s.html",
+        "https://bibscrap.readthedocs.io/en/latest/%s.html",
     ),
 }
 
