@@ -21,6 +21,7 @@ tox = "*"
 darglint = "*"
 typing-extensions = "*"
 coverage = "*"
+codecov = "*"
 
 [pipenv]
 allow_prereleases = true
