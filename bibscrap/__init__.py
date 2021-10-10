@@ -85,7 +85,12 @@ class BibscrapApp:
         )
 
     def load_builtin_extensions(self) -> None:
-        """Load all of the extensions in :py:data:`bibscrap.builtin_extensions`."""
+        """Load all of the extensions in :py:data:`bibscrap.builtin_extensions`.
+
+        Raises:
+            BibscrapException: If a module in ``bibscrap.builtin_extensions` is
+                missing a ``setup(app)`` function.
+        """
         for extension_name in builtin_extensions:
             extension = importlib.import_module(extension_name)
             if hasattr(extension, "setup"):
@@ -96,7 +101,11 @@ class BibscrapApp:
                 )
 
     def command(self, args: "argparse.Namespace") -> None:
-        """Execute a command registered by a Bibscrap extension."""
+        """Execute a command registered by a Bibscrap extension.
+
+        Args:
+            args: A namespace containing command-line arguments for the command.
+        """
         func = self.commands[args.command]
         if func:
             func(self, args)

@@ -18,3 +18,7 @@ build = "*"
 twine = "*"
 sphinx-argparse = "*"
 tox = "*"
+darglint = "*"
+
+[pipenv]
+allow_prereleases = true

@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "e8466c8d68ca25455556a68bb0d3c88ecb0273d8647b16cc8c9de51941693856"
+            "sha256": "b8b1e96b3e2ba6fc75baaa7430131ccfff1e2ed704613cabdf2cf74c79de740d"
         },
         "pipfile-spec": 6,
         "requires": {},
@@ -552,6 +552,14 @@
             ],
             "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'",
             "version": "==0.4.4"
+        },
+        "darglint": {
+            "hashes": [
+                "sha256:aa605ef47817a6d14797d32b390466edab621768ea4ca5cc0f3c54f6d8dcaec8",
+                "sha256:ac6797bcc918cd8d8f14c168a4a364f54e1aeb4ced59db58e7e4c6dfec2fe15c"
+            ],
+            "index": "pypi",
+            "version": "==1.8.0"
         },
         "distlib": {
             "hashes": [
