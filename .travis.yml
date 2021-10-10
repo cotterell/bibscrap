@@ -4,10 +4,14 @@ env:
 before_install:
   - python -m pip install --upgrade pip
 install:
+  - curl -Os https://uploader.codecov.io/latest/linux/codecov
+  - chmod u+x codecov
   - pip install pipenv
   - pipenv install --dev --skip-lock
 script:
   - pipenv run python -m tox -s
+after_success:
+  - codecov -f .coverage
 jobs:
   include:
     - python: 3.8
