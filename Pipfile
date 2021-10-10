@@ -20,6 +20,7 @@ sphinx-argparse = "*"
 tox = "*"
 darglint = "*"
 typing-extensions = "*"
+coverage = "*"
 
 [pipenv]
 allow_prereleases = true
