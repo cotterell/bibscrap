@@ -6,6 +6,7 @@ from typing import AnyStr, Callable, Optional
 import argparse
 import importlib
 import logging
+import sys
 
 __import__("pkg_resources").declare_namespace(__name__)
 
@@ -121,11 +122,11 @@ app = BibscrapApp()
 app.load_builtin_extensions()
 
 
-def __arg_parser():
-    return app.arg_parser
-
-
-def main() -> int:
+def main() -> int:  # pragma: no cover
     args = app.arg_parser.parse_args()
     app.command(args)
     return 0
+
+
+if __name__ == "__main__":
+    sys.exit(bibscrap.main())
