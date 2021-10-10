@@ -26,12 +26,13 @@ class BibscrapException(Exception):
 class BibscrapApp:
     """The main application class and extensibility interface."""
 
+    PROG = _("bibscrap")
     VERSION = __version__
     VERSION_INFO = __version_info__
 
     def __init__(self):
         self.arg_parser = argparse.ArgumentParser(
-            prog=_("bibscrap"),
+            prog=BibscrapApp.PROG,
             description=_("Semi-automated tools for systematic literature reviews."),
             epilog=_(
                 """
@@ -43,7 +44,7 @@ class BibscrapApp:
         self.arg_parser.add_argument(
             "--version",
             action="version",
-            version=f"%(prog)s {BibscrapApp.VERSION}",
+            version=f"{BibscrapApp.PROG} {BibscrapApp.VERSION}",
         )
         self.command_subparsers = self.arg_parser.add_subparsers(
             title="commands",
@@ -105,12 +106,15 @@ class BibscrapApp:
 
         Args:
             args: A namespace containing command-line arguments for the command.
+
+        Raises:
+            BibscrapException: If invalid arguments are supplied.
         """
-        func = self.commands[args.command]
-        if func:
+        try:
+            func = self.commands.get(args.command, None)
             func(self, args)
-        else:
-            self.arg_parser.parse_args(["--version"])
+        except Exception as e:
+            raise BibscrapException()
 
 
 app = BibscrapApp()

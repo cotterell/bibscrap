@@ -20,6 +20,7 @@ help:  ## show this help
 .PHONY: test
 test:
 	pipenv run python -m tox
+	pipenv run coverage report -m
 
 build: ## Build distribution.
 	pipenv run python -m build --wheel --sdist
