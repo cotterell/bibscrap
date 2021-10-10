@@ -7,7 +7,7 @@ install:
   - pip install pipenv
   - pipenv install --dev --skip-lock
 script:
-  - pipenv run python -m tox -v
+  - pipenv run python -m tox -v -s
 jobs:
   include:
     - python: 3.8
