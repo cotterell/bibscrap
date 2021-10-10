@@ -19,6 +19,7 @@ twine = "*"
 sphinx-argparse = "*"
 tox = "*"
 darglint = "*"
+typing-extensions = "*"
 
 [pipenv]
 allow_prereleases = true
