@@ -115,12 +115,7 @@ class BibscrapApp:
             )
 
     def load_builtin_extensions(self) -> None:
-        """Load all of the extensions in :py:data:`bibscrap.builtin_extensions`.
-
-        Raises:
-            BibscrapExtensionTypeError: If a module in :py:data:`bibscrap.app.builtin_extensions`
-                is missing a ``setup(app)`` function.
-        """
+        """Load all of the extensions in :py:data:`bibscrap.builtin_extensions`."""
         for module in builtin_extensions:
             self.load_extension(module)
 
