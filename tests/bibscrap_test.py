@@ -3,7 +3,7 @@
 from bibscrap.app import BibscrapApp
 from bibscrap.errors import BibscrapError, BibscrapExtensionTypeError
 from gettext import gettext as _
-from semver.version import Version
+from semver import VersionInfo
 from unittest.mock import Mock, patch
 
 import argparse
@@ -21,7 +21,7 @@ log = logging.getLogger(__name__)
 class BibscrapModuleTest(unittest.TestCase):
     def test_version_is_semver(self):
         try:
-            version = Version.parse(bibscrap.__version__)
+            version = VersionInfo.parse(bibscrap.__version__)
         except ValueError as invalid_version_error:
             self.fail(f"bibscrap.__version__: {invalid_version_error!s}")
 
