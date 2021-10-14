@@ -37,3 +37,12 @@ Thumbs.db
 
 # editor backup files
 *~
+
+# i18n and L10n
+*.mo
+
+# testing
+.tox/
+.coverage
+coverage.xml
+htmlcov/
