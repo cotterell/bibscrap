@@ -1,17 +1,52 @@
-[build-system]
-requires = [
-    "setuptools>=58",
-    "wheel"
+[tool.poetry]
+name = "bibscrap"
+version = "0.1.0"
+description = "Semi-automated tools for systematic literature reviews."
+readme = "README.rst"
+authors = ["Michael E. Cotterell <mepcotterell@gmail.com>"]
+maintainers = ["Michael E. Cotterell <mepcotterell@gmail.com>"]
+license = "MIT"
+homepage = "https://github.com/cotterell/bibscrap"
+repository = "https://github.com/cotterell/bibscrap"
+documentation = "https://bibscrap.readthedocs.io/"
+keywords = [
+    "bibscrap",
+    "literature review",
 ]
-build-backend = "setuptools.build_meta"
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Utilities",
+]
+include = [
+    "bibscrap",
+]
 
-[tool.pytest.ini_options]
-minversion = "6.0"
-addopts = "-ra -v"
-testpaths = [
-    "tests",
-]
-log_cli = true
-log_cli_level = "CRITICAL"
-log_file = "pytest.log"
-log_file_level = "DEBUG"
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/cotterell/bibscrap/issues"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+cleo = "^1.0.0a4"
+scrapy = "^2.5.1"
+
+[tool.poetry.dev-dependencies]
+pre-commit = "^2.15.0"
+black = "^21.9b0"
+tox = "^4.0.0a9"
+Sphinx = "^4.2.0"
+
+[tool.poetry.scripts]
+poetry = 'bibscrap.cli:run'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
