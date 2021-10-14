@@ -28,6 +28,7 @@ classifiers = [
 ]
 include = [
     "bibscrap",
+    "LICENSE.rst",
 ]
 
 [tool.poetry.urls]
