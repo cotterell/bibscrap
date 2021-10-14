@@ -44,9 +44,13 @@ pre-commit = "^2.15.0"
 black = "^21.9b0"
 tox = "^4.0.0a9"
 Sphinx = "^4.2.0"
+darglint = "^1.8.0"
+pytest = "^6.2.5"
+coverage = "^6.0.2"
+codecov = "^2.1.12"
 
 [tool.poetry.scripts]
-poetry = 'bibscrap.cli:run'
+poetry = 'bibscrap.cli.app:main'
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

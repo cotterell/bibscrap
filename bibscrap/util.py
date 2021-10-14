@@ -11,7 +11,7 @@ def get_optional(arg: Optional[T]) -> T:
         arg: The :py:class:`Optional`o
 
     Returns:
-        The non-:py:const:`None` value held by `arg`.
+        The value held by `arg`.
 
     Raises:
         AssertionError: If there is no value present in `arg` (i.e., ``arg is None``).
