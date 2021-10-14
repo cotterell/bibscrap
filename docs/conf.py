@@ -22,7 +22,6 @@ copyright = f"{years}, {author} and the University of Georgia"
 version = importlib.import_module("bibscrap").__version__
 revision = os.popen("git rev-parse --short HEAD").read().strip()
 
-branch = os.popen("git branch --show-current").read().strip()
 licenses = {
     "documentation": {
         "name": "CC BY-NC 4.0",
@@ -30,7 +29,7 @@ licenses = {
     },
     "code": {
         "name": "MIT",
-        "url": f"https://github.com/cotterell/bibscrap/blob/{branch}/LICENSE",
+        "url": f"https://github.com/cotterell/bibscrap/blob/main/LICENSE.rst",
     },
 }
 
