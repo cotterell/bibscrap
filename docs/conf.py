@@ -148,7 +148,6 @@ html_theme_options = {
 # Dictionary of values to pass into the template engine’s context for all pages.
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_context
 html_context = {
-    "branch": branch,
     "licenses": licenses,
 }
 
