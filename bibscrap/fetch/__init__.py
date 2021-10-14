@@ -1,12 +1,14 @@
 """bibscrap.fetch - fetch references."""
 
+from __future__ import annotations
 
-def command(app: "bibscrap.BibscrapApp", args: "argparse.Namespace") -> None:
-    print("fetching...")
+
+def command(app: BibscrapApp, args: dict) -> None:
+    print("fetching.....")
     print(args)
 
 
-def setup(app: "bibscrap.BibscrapApp") -> None:
+def setup(app: BibscrapApp) -> dict:
 
     arg_parser = app.register_command(
         command="fetch",
@@ -20,3 +22,7 @@ def setup(app: "bibscrap.BibscrapApp") -> None:
         type=int,
         help="The number of horizons.",
     )
+
+    return {
+        "version": "0.1.1",
+    }

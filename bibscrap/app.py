@@ -7,9 +7,13 @@ from typing import Callable, NewType, Optional, Union
 from types import ModuleType
 
 import argparse
+import bibscrap
 import importlib
 import logging
 import sys
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
 
 #: The list of Bibscrap extension modules that are loaded by
 #: :py:func:`BibscrapApp.load_builtin_extensions`.
@@ -18,16 +22,25 @@ builtin_extensions = [
 ]
 
 
+class BibscrapCommand:
+    def __init__(self, **kwargs):
+        pass
+
+
 class BibscrapApp:
     """The main application class and extensibility interface."""
 
-    PROG = _("bibscrap")
-    VERSION = None
-    VERSION_INFO = None
-
     def __init__(self):
+        self.__prog = _("bibscrap")
+        self.__version = bibscrap.__version__
+        self.__version_info = bibscrap.__version_info__
+        self.__init_arg_parsers()
+        self.__extensions = dict()
+        self.commands = dict()
+
+    def __init_arg_parsers(self):
         self.arg_parser = argparse.ArgumentParser(
-            prog=BibscrapApp.PROG,
+            prog=self.__prog,
             description=_("Semi-automated tools for systematic literature reviews."),
             epilog=_(
                 """
@@ -39,7 +52,7 @@ class BibscrapApp:
         self.arg_parser.add_argument(
             "--version",
             action="version",
-            version=f"{BibscrapApp.PROG} {BibscrapApp.VERSION}",
+            version=f"{self.prog} {self.version}",
         )
         self.command_parsers = self.arg_parser.add_subparsers(
             title="commands",
@@ -47,7 +60,22 @@ class BibscrapApp:
             metavar="<command>",
             required=True,
         )
-        self.commands = dict()
+
+    @property
+    def prog(self) -> str:
+        return self.__prog
+
+    @property
+    def version(self) -> str:
+        return self.__version
+
+    @property
+    def extensions(self) -> list:
+        """list: List of loaded extensions."""
+        return [
+            (name, record.get("version", None))
+            for name, record in self.__extensions.items()
+        ]
 
     def register_command(
         self,
@@ -80,7 +108,7 @@ class BibscrapApp:
             description=description,
         )
 
-    def load_extension(self, module: Union[str, ModuleType]) -> None:
+    def load_extension(self, name: str, package: str = None) -> None:
         """Load a Bibscrap extension module.
 
         Bibscrap extension modules are regular Python modules that contain
@@ -88,7 +116,7 @@ class BibscrapApp:
 
         .. code:: python
 
-            def setup(app: BibscrapApp) -> None:
+            def setup(app: BibscrapApp) -> BibscrapExtension:
                 ...
 
         If `module` was created since the interpreter began execution, then you
@@ -97,29 +125,18 @@ class BibscrapApp:
 
         Args:
             module: The Bibscrap extension module to load.
-
-        Raises:
-            BibscrapExtensionTypeError: If the module is missing a ``setup(app)``
-                function.
         """
-        if isinstance(module, str):
-            extension = importlib.import_module(module)
-        elif isinstance(module, ModuleType):
-            extension = module
-
-        if hasattr(extension, "setup"):
-            extension.setup(self)
-        else:
-            raise BibscrapExtensionTypeError(
-                f"{extension} is not a Bibscrap extension (missing setup(app))",
-            )
+        extension = importlib.import_module(name, package)
+        extension_name = extension.__name__
+        extension_info = extension.setup(self)
+        self.__extensions[extension_name] = extension_info
 
     def load_builtin_extensions(self) -> None:
         """Load all of the extensions in :py:data:`bibscrap.builtin_extensions`."""
         for module in builtin_extensions:
             self.load_extension(module)
 
-    def command(self, args: "argparse.Namespace") -> None:
+    def execute_command(self, args: dict) -> None:
         """Execute a command registered by a Bibscrap extension.
 
         Args:
@@ -129,7 +146,8 @@ class BibscrapApp:
             BibscrapError: If invalid arguments are supplied.
         """
         try:
-            func = self.commands.get(args.command, None)
+            command = args.get("command")
+            func = self.commands.get(command, None)
             func(self, args)
         except Exception as e:
             raise BibscrapError()

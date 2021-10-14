@@ -15,8 +15,6 @@ __version_info__ = __version__.split(".")
 __logger = logging.getLogger(__name__)
 
 __app = BibscrapApp()
-__app.VERSION = __version__
-__app.VERSION_INFO = __version_info__
 __app.load_builtin_extensions()
 
 
@@ -25,10 +23,6 @@ def __arg_parser() -> argparse.ArgumentParser:  # pragma: no cover
 
 
 def main() -> int:  # pragma: no cover
-    args = __app.arg_parser.parse_args()
-    __app.command(args)
+    args = vars(__app.arg_parser.parse_args())
+    __app.execute_command(args)
     return 0
-
-
-if __name__ == "__main__":
-    sys.exit(bibscrap.main())
