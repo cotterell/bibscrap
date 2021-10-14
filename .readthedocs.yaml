@@ -8,7 +8,7 @@ build:
   image: testing
 
 python:
-  version: 3.10
+  version: 3.9
   install:
     - method: pip
       path: .
