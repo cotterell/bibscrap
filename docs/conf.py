@@ -44,7 +44,6 @@ needs_sphinx = "4.2"
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-extensions
 extensions = [
-    "sphinxarg.ext",
     "sphinx.ext.autodoc",
     "sphinx.ext.napoleon",
     "sphinx.ext.autosectionlabel",
@@ -53,7 +52,6 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx_rtd_theme",
     "sphinxcontrib.bibtex",
-    "bibscrap.sphinx.acmref",
 ]
 
 # Refuse to build if certain extensions are too old.

@@ -28,15 +28,5 @@ Command-Line Interface
 
 Bibscrap offers a command-line interface...
 
-.. argparse::
-   :module: bibscrap
-   :func: __arg_parser
-   :prog: bibscrap
-   :noepilog:
-   :nosubcommands:
-   :nodescription:
-
-----
-
 Available Commands
 ------------------

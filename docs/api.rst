@@ -8,15 +8,21 @@ bibscrap
 .. automodule:: bibscrap
    :members:
 
-bibscrap.app
-===============
+bibscrap.cli
+============
 
-.. automodule:: bibscrap.app
+.. automodule:: bibscrap.cli
    :members:
 
 
-bibscrap.errors
-===============
+bibscrap.cli.app
+================
 
-.. automodule:: bibscrap.errors
+.. automodule:: bibscrap.cli.app
+   :members:
+
+bibscrap.util
+=============
+
+.. automodule:: bibscrap.util
    :members:
