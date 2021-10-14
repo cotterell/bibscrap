@@ -39,18 +39,18 @@ python = "^3.8"
 cleo = "^1.0.0a4"
 scrapy = "^2.5.1"
 single-source = "^0.2.0"
+Sphinx = { version = "^4.2.0", optional = true }
+sphinx-rtd-theme = { version = "^1.0.0", optional = true }
+sphinxcontrib-bibtex = { version = "^2.4.1", optional = true }
 
 [tool.poetry.dev-dependencies]
 pre-commit = "^2.15.0"
 black = "^21.9b0"
 tox = "^4.0.0a9"
-Sphinx = { version = "^4.2.0", optional = true }
 darglint = "^1.8.0"
 pytest = "^6.2.5"
 coverage = "^6.0.2"
 codecov = "^2.1.12"
-sphinx-rtd-theme = { version = "^1.0.0", optional = true }
-sphinxcontrib-bibtex = { version = "^2.4.1", optional = true }
 
 [tool.poetry.extras]
 docs = [
