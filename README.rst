@@ -61,13 +61,11 @@ provided below::
 
   $ git clone https://github.com/cotterell/bibscrap.git
   $ cd bibscrap
-  $ pipenv shell
-  $ pipenv install
+  $ poetry install -v
 
 If you are part of the **bibscrap** development team, then you should also
 install the development packages::
 
-  $ pipenv install --dev
   $ pre-commit install
 
 Contributors
