@@ -1,15 +1,13 @@
 language: python
-env:
-  - PIPENV_IGNORE_VIRTUALENVS=1
 before_install:
   - pip install -U pip
-  - pip install -U poetry
 install:
-  - poetry install
+  - pip install -U codecov
+  - pip install -U tox
 script:
   - python -m tox -s
 after_success:
-  - pipenv run codecov
+  - python -m codecov
 jobs:
   include:
     - python: 3.8
