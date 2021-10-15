@@ -18,25 +18,24 @@ BUILTIN_COMMANDS = [
 ]
 
 
-def load_command(name: str) -> Callable:
-    """TODO."""
-
-    def _load() -> Type[Command]:
-        module = import_module(f"{BUILTIN_COMMANDS_MODULE}.{name}")
-        command_class = getattr(module, f"{name.title()}Command")
-        return command_class()
-
-    return _load
-
-
 class Application(CleoApplication):
     """Bibscrap application class."""
 
     def __init__(self) -> None:
         super().__init__("bibscrap", get_optional(__version__))
-        self.set_command_loader(
-            CommandLoader({name: load_command(name) for name in BUILTIN_COMMANDS}),
-        )
+        self.set_command_loader(CommandLoader())
+        for name in BUILTIN_COMMANDS:
+            self.load_command(name)
+
+    def load_command(self, name: str) -> Callable:
+        """TODO."""
+        module = import_module(f"{BUILTIN_COMMANDS_MODULE}.{name}")
+        command_class = getattr(module, f"{name.title()}Command")
+        self.command_loader.register_factory(name, command_class)
+
+    @property
+    def command_loader(self) -> CommandLoader:
+        return self._command_loader
 
 
 def main() -> int:
