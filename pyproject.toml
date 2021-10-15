@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "bibscrap"
-version = "0.1.0-alpha.1"
+version = "0.1.0-alpha.2"
 description = "Semi-automated tools for systematic literature reviews."
 readme = "README.rst"
 authors = ["Michael E. Cotterell <mepcotterell@gmail.com>"]
