@@ -197,7 +197,3 @@ bibtex_default_style = "plain"
 autodoc_typehints = "both"
 
 autoclass_content = "both"
-
-autodoc_type_aliases = {
-    "Command": "bibscrap.app.Command",
-}

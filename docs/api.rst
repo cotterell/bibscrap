@@ -21,6 +21,12 @@ bibscrap.cli.app
 .. automodule:: bibscrap.cli.app
    :members:
 
+bibscrap.cli.commands
+=====================
+
+.. automodule:: bibscrap.cli.commands
+   :members:
+
 bibscrap.util
 =============
 
