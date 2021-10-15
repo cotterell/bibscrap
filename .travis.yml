@@ -3,10 +3,11 @@ before_install:
   - pip install -U pip
   - pip install -U -q codecov
   - pip install -U -q poetry
+  - pip install -U -q tox
 install:
   - poetry install
 script:
-  - poetry run python -m tox -s
+  - python -m tox -s
 after_success:
   - python -m codecov
 jobs:
