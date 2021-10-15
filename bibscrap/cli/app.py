@@ -28,7 +28,11 @@ class Application(CleoApplication):
             self.load_command(name)
 
     def load_command(self, name: str) -> Callable:
-        """TODO."""
+        """Load a command.
+
+        Args:
+            name: The command name.
+        """
         module = import_module(f"{BUILTIN_COMMANDS_MODULE}.{name}")
         command_class = getattr(module, f"{name.title()}Command")
         self.command_loader.register_factory(name, command_class)
