@@ -46,10 +46,12 @@ extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.napoleon",
     "sphinx.ext.autosectionlabel",
+    "sphinx.ext.graphviz",
     "sphinx.ext.todo",
     "sphinx.ext.extlinks",
     "sphinx.ext.intersphinx",
     "sphinx_rtd_theme",
+    "sphinx_panels",
     "sphinxcontrib.bibtex",
 ]
 
@@ -83,15 +85,14 @@ rst_prolog = """
    :class: highlight
    :language: python
 
-.. _issue_tracker: https://github.com/cotterell/bibscrap/issues
-.. _issue_tracker_new: https://github.com/cotterell/bibscrap/issues/new/choose
-
 .. admonition:: Development Status :: 2 - Pre-Alpha
    :class: danger alert
 
    Bibscrap is still in its **pre-alpha** development phase. This is the
    earliest stage of software development. The project is still establishing its
-   requirement, and it contains code that is not yet feature-complete.
+   requirementa, and it contains code that is not yet feature-complete. For
+   more information about what this means for Bibscrap |version|, please refer
+   to :ref:`api:Versions` in the API documentation.
 
 ----
 """
@@ -115,6 +116,10 @@ extlinks = {
     "docs_latest": (
         "https://bibscrap.readthedocs.io/en/latest/%s.html",
         "https://bibscrap.readthedocs.io/en/latest/%s.html",
+    ),
+    "spdx": (
+        "https://spdx.org/licenses/%s",
+        "%s",
     ),
 }
 
@@ -194,6 +199,10 @@ bibtex_default_style = "plain"
 
 # -- Options for sphinx.ext.autodoc ------------------------------------------
 
-autodoc_typehints = "both"
+autodoc_typehints = "description"
 
 autoclass_content = "both"
+
+# -- Options for sphinx.ext.graphviz -----------------------------------------
+
+graphviz_output_format = "svg"

@@ -61,9 +61,9 @@
         {% if licenses %}
           <span class="show_licenses">
             Unless otherwise noted, the documentation for {{ project }} is licensed under a
-            <a rel="license" href="{{ licenses['documentation']['url'] }}">{{ licenses['documentation']['name'] }}</a>
+            <a rel="license" href="{{ pathto('license') }}">{{ licenses['documentation']['name'] }}</a>
             license, and source code examples in the documentation are licensed under an
-            <a rel="license" href="{{ licenses['code']['url'] }}">{{ licenses['code']['name'] }}</a>
+            <a rel="license" href="{{ pathto('license') }}">{{ licenses['code']['name'] }}</a>
             license.
           </span>
         {% endif %}

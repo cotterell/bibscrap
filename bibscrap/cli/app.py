@@ -73,7 +73,3 @@ class Application(CleoApplication):
 
 def main() -> int:
     return Application().run()
-
-
-if __name__ == "__main__":
-    main()

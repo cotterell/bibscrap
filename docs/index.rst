@@ -28,7 +28,7 @@ The **bibscrap** package provides semi-automated tools for
    :maxdepth: 1
    :caption: Appendices
 
-   sphinxext
+   license
    To Do <todo>
 
 .. toctree::

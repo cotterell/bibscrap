@@ -24,6 +24,10 @@
     padding: 1.618em 2.236em;
 }
 
+html.writer-html5 .rst-content dl.field-list > dt {
+    padding-left: 0;
+}
+
 .rst-content .admonition.alert p {
     font-size: 80%;
     line-height: initial;
