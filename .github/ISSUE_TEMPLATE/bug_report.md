@@ -3,7 +3,7 @@ name: Bug report
 about: Create a report to help us improve
 title: ''
 labels: bug
-assignees: ''
+assignees: mepcotterell
 
 ---
 
@@ -24,8 +24,9 @@ If applicable, add screenshots to help explain your problem.
 
 **Context (please complete the following information):**
  - Bibscrap Version: [output of `bibscrap --version`]
+ - Python Version [output of `python --version`]
  - OS: [e.g. macOS]
- - Version [e.g. 11.5.2]
+ - OS Version [e.g. Big Sur 11.5.2]
 
 **Additional context**
 Add any other context about the problem here.
