@@ -111,7 +111,7 @@ autosectionlabel_prefix_document = True
 extlinks = {
     "issue": (
         "https://github.com/cotterell/bibscrap/issues/%s",
-        "issue %s",
+        "GH-%s",
     ),
     "docs_latest": (
         "https://bibscrap.readthedocs.io/en/latest/%s.html",

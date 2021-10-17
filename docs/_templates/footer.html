@@ -60,10 +60,8 @@
         {% endif %}
         {% if licenses %}
           <span class="show_licenses">
-            Unless otherwise noted, the documentation for {{ project }} is licensed under a
-            <a rel="license" href="{{ pathto('license') }}">{{ licenses['documentation']['name'] }}</a>
-            license, and source code examples in the documentation are licensed under an
-            <a rel="license" href="{{ pathto('license') }}">{{ licenses['code']['name'] }}</a>
+            Unless otherwise noted, the software and associated documentation files for {{ project }} are
+            licensed under an <a rel="license" href="{{ pathto('license') }}">MIT</a>
             license.
           </span>
         {% endif %}

@@ -28,6 +28,7 @@ The **bibscrap** package provides semi-automated tools for
    :maxdepth: 1
    :caption: Appendices
 
+   news
    license
    To Do <todo>
 

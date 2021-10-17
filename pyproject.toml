@@ -85,6 +85,11 @@ filename = "docs/news.rst"
 wrap = true
 issue_format = ":issue:`{issue}`"
 
+[[tool.towncrier.type]]
+directory = "locale"
+name = "Internationalization and Localization"
+showcontent = true
+
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
