@@ -179,7 +179,7 @@ name = "click"
 version = "8.0.3"
 description = "Composable command line interface toolkit"
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -190,7 +190,7 @@ name = "click-default-group"
 version = "1.2.2"
 description = "Extends click.Group to invoke a command without explicit subcommand name"
 category = "main"
-optional = false
+optional = true
 python-versions = "*"
 
 [package.dependencies]
@@ -213,7 +213,7 @@ name = "colorama"
 version = "0.4.4"
 description = "Cross-platform colored terminal text."
 category = "main"
-optional = false
+optional = true
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
@@ -418,7 +418,7 @@ name = "jinja2"
 version = "3.0.2"
 description = "A very fast and expressive template engine."
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -465,7 +465,7 @@ name = "markupsafe"
 version = "2.0.1"
 description = "Safely add untrusted strings to HTML/XML markup."
 category = "main"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [[package]]
@@ -1002,7 +1002,7 @@ name = "toml"
 version = "0.10.2"
 description = "Python Library for Tom's Obvious, Minimal Language"
 category = "main"
-optional = false
+optional = true
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
@@ -1018,7 +1018,7 @@ name = "towncrier"
 version = "21.3.0"
 description = "Building newsfiles for your project."
 category = "main"
-optional = false
+optional = true
 python-versions = "*"
 
 [package.dependencies]
@@ -1161,13 +1161,13 @@ test = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 
 [extras]
-dev = ["black", "pre-commit", "tox", "darglint", "pytest", "coverage", "codecov"]
+devtools = ["black", "pre-commit", "tox", "darglint", "pytest", "coverage", "codecov", "towncrier"]
 docs = ["Sphinx", "sphinx-rtd-theme", "sphinxcontrib-bibtex", "sphinx-panels"]
 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "d3d42e259008e2692dbac7003ce0dc286282360597e9c37b57ac04cae86e5a38"
+content-hash = "91c03880e81f18615f40c89d56435f6f077abe7827a3aebaa2c367967dd3ecdd"
 
 [metadata.files]
 alabaster = [

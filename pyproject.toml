@@ -57,7 +57,7 @@ beautifulsoup4 = "^4.10.0"
 [tool.poetry.dev-dependencies]
 
 [tool.poetry.extras]
-dev = [
+devtools = [
     "black",
     "pre-commit",
     "tox",
