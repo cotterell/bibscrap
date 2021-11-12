@@ -81,3 +81,8 @@ Michael E. Cotterell   `@mepcotterell <https://github.com/mepcotterell>`_       
 Mitchell Casleton      `@MitchellCasleton <https://github.com/MitchellCasleton>`_  Developer
 My Nguyen              `@mynguyen0628 <https://github.com/mynguyen0628>`_          Developer
 =====================  ==========================================================  ============
+
+
+.. image:: https://badges.gitter.im/bibscrap/community.svg
+   :alt: Join the chat at https://gitter.im/bibscrap/community
+   :target: https://gitter.im/bibscrap/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
