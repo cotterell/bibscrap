@@ -16,6 +16,21 @@ repos:
   - id: mixed-line-ending
   - id: name-tests-test
   - id: trailing-whitespace
+- repo: https://github.com/pre-commit/pygrep-hooks
+  rev: v1.9.0
+  hooks:
+  - id: python-use-type-annotations
+  - id: python-check-blanket-noqa
+  - id: python-no-eval
+  - id: rst-backticks
+  - id: rst-directive-colons
+  - id: rst-inline-touching-normal
+  - id: text-unicode-replacement-char
+- repo: https://github.com/Lucas-C/pre-commit-hooks-markup
+  rev: v1.0.1
+  hooks:
+  - id: rst-linter
+    files: README.rst
 - repo: https://github.com/pycqa/pydocstyle
   rev: 6.1.1
   hooks:
@@ -28,3 +43,8 @@ repos:
   hooks:
   - id: black
     language_version: python3
+- repo: https://github.com/Lucas-C/pre-commit-hooks-safety
+  rev: v1.2.4
+  hooks:
+  - id: python-safety-dependencies-check
+    files: ^pyproject.toml$
