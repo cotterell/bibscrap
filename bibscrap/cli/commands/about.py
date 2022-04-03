@@ -1,13 +1,17 @@
+"""about.py - 'bibscrap about' command module."""
+
 from .command import Command
 
 
 class AboutCommand(Command):
+    """The 'bibscrap about' command."""
 
     name = "about"
 
     description = "Shows information about Bibscrap."
 
     def handle(self) -> None:
+        """Execute the command."""
         self.line(
             "<info>Bibscrap - Semi-automated Tools for Systematic Literature Reviews</info>"
         )
