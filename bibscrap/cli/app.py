@@ -1,5 +1,4 @@
-"""TODO.
-"""
+"""Defines the API for Bibscrap's command-line interface (CLI) application."""
 
 from importlib import import_module
 from typing import TYPE_CHECKING
@@ -24,6 +23,7 @@ class Application(CleoApplication):
     """Bibscrap application class."""
 
     def __init__(self) -> None:
+        """Construct an ``Application`` object."""
         super().__init__("bibscrap", __version__)
         self.set_command_loader(CommandLoader())
         for builtin_command in BUILTIN_COMMANDS:
@@ -70,10 +70,12 @@ class Application(CleoApplication):
 
     @property
     def command_loader(self) -> CommandLoader:
+        """Return the application's command loader."""
         return self._command_loader
 
 
 def main() -> int:
+    """Execute Bibscrap's command-line interface (CLI) application."""
     app = Application()
     exit_status = app.run()
     return exit_status[0]

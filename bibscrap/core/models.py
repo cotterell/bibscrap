@@ -1,5 +1,5 @@
-"""
-"""
+"""bibscrap.core.models - Bibscrap core data models."""
+
 import builtins
 import numbers
 import typing
@@ -12,16 +12,22 @@ from typing import Optional
 
 
 class Identifier:
+    """A value used to identify something."""
+
     value: str
 
     def __init__(self, value) -> None:
+        """Construct an ``Identifier`` object."""
         self.value = value
 
-    async def resolve(self):
+    def resolve(self):
+        """Resolve the identifier's value."""
         return self.value
 
 
 class DOI(Identifier):
+    """Digital Object Identifier."""
+
     RESOLVERS = {
         "doi.org": "https://doi.org/",
         "dx.doi.org": "https://dx.doi.org/",
@@ -54,8 +60,6 @@ class BibItem:
 
 
 class CreativeWork:
-    """The most generic kind of creative work, including books, movies, photographs,
-    software programs, etc.
-    """
+    """The most generic kind of creative work."""
 
     pass

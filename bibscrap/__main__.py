@@ -1,3 +1,5 @@
+"""bibscrap (main) - The top-level Bibscrap code environment."""
+
 import sys
 
 if __name__ == "__main__":

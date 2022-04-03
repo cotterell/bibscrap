@@ -1,8 +1,8 @@
-"""
+"""bibscrap - The top-level Bibscrap module.
+
 .. versionadded:: 1.0.0
 
    Initial :ref:`api:Public API` release.
-
 """
 
 from pathlib import Path
