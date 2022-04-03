@@ -14,8 +14,8 @@ bibscrap
    :alt: Join the chat at https://gitter.im/bibscrap/community
    :target: https://gitter.im/bibscrap/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
 
-.. image:: https://app.travis-ci.com/cotterell/bibscrap.svg
-   :target: https://app.travis-ci.com/cotterell/bibscrap
+.. image:: https://github.com/cotterell/bibscrap/actions/workflows/build.yml/badge.svg
+   :target: https://github.com/cotterell/bibscrap/actions/workflows/build.yml
    :alt: Continuous integration
 
 .. image:: https://codecov.io/gh/cotterell/bibscrap/branch/main/graph/badge.svg?token=TQQWS0OQ0E

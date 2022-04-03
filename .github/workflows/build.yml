@@ -1,4 +1,4 @@
-name: Bibscrap Continuous Integration
+name: build
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  test:
+  ci-build:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
