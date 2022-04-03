@@ -91,18 +91,6 @@ bibscrap.core
 .. automodule:: bibscrap.core
    :members:
 
-bibscrap.core.event
--------------------
-
-.. automodule:: bibscrap.core.event
-   :members:
-
-bibscrap.util
--------------
-
-.. automodule:: bibscrap.util
-   :members:
-
 Internal API
 ============
 
@@ -123,4 +111,10 @@ bibscrap.cli.commands
 ---------------------
 
 .. automodule:: bibscrap.cli.commands
+   :members:
+
+bibscrap.util.config
+--------------------
+
+.. automodule:: bibscrap.util.config
    :members:

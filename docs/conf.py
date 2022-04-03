@@ -81,7 +81,7 @@ exclude_patterns = [
 ]
 
 rst_prolog = """
-.. role:: python(code)
+.. role:: py(code)
    :class: highlight
    :language: python
 

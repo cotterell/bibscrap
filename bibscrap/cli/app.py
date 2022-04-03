@@ -1,3 +1,6 @@
+"""TODO.
+"""
+
 from importlib import import_module
 from typing import TYPE_CHECKING
 from typing import Callable
@@ -9,7 +12,6 @@ from cleo.application import Application as CleoApplication
 from bibscrap import __version__
 from bibscrap.cli.commands import CommandLoader
 from bibscrap.cli.commands.command import Command
-from bibscrap.util import get_optional
 
 BUILTIN_COMMANDS_MODULE = "bibscrap.cli.commands"
 
@@ -22,7 +24,7 @@ class Application(CleoApplication):
     """Bibscrap application class."""
 
     def __init__(self) -> None:
-        super().__init__("bibscrap", get_optional(__version__))
+        super().__init__("bibscrap", __version__)
         self.set_command_loader(CommandLoader())
         for builtin_command in BUILTIN_COMMANDS:
             self.register_builtin_command(builtin_command)
@@ -72,4 +74,6 @@ class Application(CleoApplication):
 
 
 def main() -> int:
-    return Application().run()
+    app = Application()
+    exit_status = app.run()
+    return exit_status[0]
