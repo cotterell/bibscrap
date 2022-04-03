@@ -4,7 +4,7 @@ repos:
     -   id: check-hooks-apply
     -   id: check-useless-excludes
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.0.1
+    rev: v4.1.0
     hooks:
     -   id: check-case-conflict
     -   id: check-merge-conflict
@@ -16,7 +16,7 @@ repos:
     -   id: name-tests-test
     -   id: trailing-whitespace
 -   repo: https://github.com/psf/black
-    rev: 21.9b0
+    rev: 22.3.0
     hooks:
     -   id: black
         language_version: python3
