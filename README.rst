@@ -38,7 +38,7 @@ The **bibscrap** package provides semi-automated tools for systematic literature
 Requirements
 ============
 
-* Python 3.9+
+* Python 3.8+
 
 Install
 =======
