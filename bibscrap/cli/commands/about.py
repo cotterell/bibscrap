@@ -8,15 +8,21 @@ class AboutCommand(Command):
     description = "Shows information about Bibscrap."
 
     def handle(self) -> None:
-        self.info(
-            "Bibscrap - Semi-automated Tools for Systematic Literature Reviews</info>"
+        self.line(
+            "<info>Bibscrap - Semi-automated Tools for Systematic Literature Reviews</info>"
         )
         self.line_blank()
-        self.comment(
+        self.line(
+            "<comment>"
             "Bibscrap provides tools that help researchers prepare rigorous systematic "
             "literature reviews."
+            "</comment>"
         )
         self.line_blank()
-        self.comment(
-            "See <fg=blue>https://github.com/cotterell/bibscrap/</fg> for more information."
+        self.render_table(
+            headers=["Resource", "URL"],
+            rows=[
+                ["Documentation", "<info>https://bibscrap.readthedocs.io/</info>"],
+                ["GitHub", "<info>https://github.com/cotterell/bibscrap</info>"],
+            ],
         )
