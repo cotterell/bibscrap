@@ -46,3 +46,6 @@ Thumbs.db
 .coverage
 coverage.xml
 htmlcov/
+
+# other
+.DS_Store
