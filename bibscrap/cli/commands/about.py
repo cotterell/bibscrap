@@ -10,6 +10,20 @@ class AboutCommand(Command):
 
     description = "Shows information about Bibscrap."
 
+    def render_resources_table(self) -> None:
+        """Render a table containing liks to various Bibscrap resources."""
+        resources = self.table()
+        resources.set_style("borderless")
+        resources.set_header_title("Resources")
+        resources.set_headers(["Resource", "URL"])
+        resources.set_rows(
+            [
+                ["Documentation", "<info>https://bibscrap.readthedocs.io/</info>"],
+                ["GitHub", "<info>https://github.com/cotterell/bibscrap</info>"],
+            ]
+        )
+        resources.render()
+
     def handle(self) -> None:
         """Execute the command."""
         self.line(
@@ -23,10 +37,4 @@ class AboutCommand(Command):
             "</comment>"
         )
         self.line_blank()
-        self.render_table(
-            headers=["Resource", "URL"],
-            rows=[
-                ["Documentation", "<info>https://bibscrap.readthedocs.io/</info>"],
-                ["GitHub", "<info>https://github.com/cotterell/bibscrap</info>"],
-            ],
-        )
+        self.render_resources_table()
