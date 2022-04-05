@@ -7,6 +7,7 @@ from typing import Optional
 from typing import Type
 
 from cleo.application import Application as CleoApplication
+from cleo import commands as cleo_commands
 
 from bibscrap import __version__
 from bibscrap.cli.commands import CommandLoader
@@ -23,11 +24,18 @@ class Application(CleoApplication):
     """Bibscrap application class."""
 
     def __init__(self) -> None:
-        """Construct an ``Application`` object."""
+        """Construct a Bibscrap ``Application`` object."""
         super().__init__("bibscrap", __version__)
         self.set_command_loader(CommandLoader())
         for builtin_command in BUILTIN_COMMANDS:
             self.register_builtin_command(builtin_command)
+        self.unhide_completions_command()
+
+    def unhide_completions_command(self) -> None:
+        """Unhide the "completions" command provided by Cleo."""
+        completions_class = cleo_commands.completions_command.CompletionsCommand
+        completions_command = self.get(completions_class.name)
+        completions_command.hidden = False
 
     def register_command(
         self,
