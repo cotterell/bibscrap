@@ -4,6 +4,4 @@
 class Bibscrap:
     """TODO."""
 
-    def __init__(self) -> None:
-        """Construct a ``Bibscrap`` object."""
-        pass
+    pass

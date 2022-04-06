@@ -30,6 +30,7 @@ class Application(CleoApplication):
         for builtin_command in BUILTIN_COMMANDS:
             self.register_builtin_command(builtin_command)
         self.unhide_completions_command()
+        self.auto_exits(False)
 
     def unhide_completions_command(self) -> None:
         """Unhide the "completions" command provided by Cleo."""
@@ -86,4 +87,4 @@ def main() -> int:
     """Execute Bibscrap's command-line interface (CLI) application."""
     app = Application()
     exit_status = app.run()
-    return exit_status[0]
+    return exit_status
